@@ -1,0 +1,56 @@
+#wrapper {
+  position: absolute;
+  top: 38%; left: 42%;
+}
+
+.box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+
+.filosofia {
+  background-image: url("./filosofia1.png");
+}
+
+.politica {
+  background-image: url("./politica1.png");
+}
+
+.societa {
+  background-image: url("./societa1.png");
+}
+
+.religione {
+  background-image: url("./religione1.png");
+}
+
+#titolo {
+  position: absolute;
+  width: 100%; height: 30%;
+  top: 0; left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./titolo.png");
+  background-position: left top;
+}
+
+#logo {
+  position: absolute;
+  width: 100%; height: 20%;
+  bottom: 0; right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./marchio.png");
+  background-position: right bottom;
+}
+
+
+  @keyframes float {
+  	0% {opacity: 1}
+    50% {opacity: 0.55}
+  	100% {opacity: 1}
+  }
