@@ -1,22 +1,220 @@
 <html>
 <head>
-<meta charset="utf-8">
-<title>template-info</title>
-<script type="text/javascript" src="jquery.min.js"></script>
-<style>
 
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./pos-orizzontalestyle.css">
 
-
-</style>
 </head>
 
 <body>
-<h1>ciao sono ready steady ciao fede</h1>
+
+  <div id="titolo">
+  </div>
+
+  <div id="logo">
+  </div>
+
+  <div id="wrapper">
+      <div id="ver1" class="filosofia box">
+      </div>
+      <div id="ver2" class="filosofia box">
+      </div>
+      <div id="ver3" class="filosofia box">
+      </div>
+      <div id="ver4" class="filosofia box">
+      </div>
+      <div id="ver5" class="filosofia box">
+      </div>
+      <div id="ver6" class="politica box">
+      </div>
+      <div id="ver7" class="politica box">
+      </div>
+      <div id="ver8" class="politica box">
+      </div>
+      <div id="ver9" class="politica box">
+      </div>
+      <div id="ver10" class="politica box">
+    </div>
+      <div id="ver11" class="societa box">
+      </div>
+      <div id="ver12" class="societa box">
+      </div>
+      <div id="ver13" class="societa box">
+      </div>
+      <div id="ver14" class="societa box">
+      </div>
+      <div id="ver15" class="societa box">
+      </div>
+      <div id="ver16" class="religione box">
+      </div>
+      <div id="ver17" class="religione box">
+      </div>
+      <div id="ver18" class="religione box">
+      </div>
+      <div id="ver19" class="religione box">
+      </div>
+      <div id="ver20" class="religione box">
+      </div>
+  </div>
 
 </body>
-
-
 <script>
+
+//margine
+var m = 4;
+
+//dimensione delle vaschette all'inizio in px
+var dim = 60;
+
+//fattore di ingrandimento
+var mal = 1.1;
+
+//all'inizio tutti hanno la dim iniziale
+$(".box").css({
+  width: dim, height: dim,
+})
+
+//durata dell'animazione
+function random() {
+  return Math.random()*(7-2+1) + 2
+}
+
+$("#ver1").data({"x": 1, "y": 1, "click": 0});
+$("#ver2").data({"x": 2, "y": 1, "click": 0});
+$("#ver3").data({"x": 3, "y": 1, "click": 0});
+$("#ver4").data({"x": 4, "y": 1, "click": 0});
+$("#ver5").data({"x": 5, "y": 1, "click": 0});
+$("#ver6").data({"x": 1, "y": 2, "click": 0});
+$("#ver7").data({"x": 2, "y": 2, "click": 0});
+$("#ver8").data({"x": 3, "y": 2, "click": 0});
+$("#ver9").data({"x": 4, "y": 2, "click": 0});
+$("#ver10").data({"x": 5, "y": 2, "click": 0});
+$("#ver11").data({"x": 1, "y": 3, "click": 0});
+$("#ver12").data({"x": 2, "y": 3, "click": 0});
+$("#ver13").data({"x": 3, "y": 3, "click": 0});
+$("#ver14").data({"x": 4, "y": 3, "click": 0});
+$("#ver15").data({"x": 5, "y": 3, "click": 0});
+$("#ver16").data({"x": 1, "y": 4, "click": 0});
+$("#ver17").data({"x": 2, "y": 4, "click": 0});
+$("#ver18").data({"x": 3, "y": 4, "click": 0});
+$("#ver19").data({"x": 4, "y": 4, "click": 0});
+$("#ver20").data({"x": 5, "y": 4, "click": 0});
+
+for(i=1; i<21; i++) {
+  for(j=1; j<6; j++) {
+    if($("#ver"+i).data("x") == j ) {
+      $("#ver"+i).css({
+        left: dim*(j-1)+m*j+"px",
+       animation: "float "+random()+"s"+" ease-in-out infinite",
+      })
+    }
+  }
+  for(j=1; j<5; j++) {
+    if($("#ver"+i).data("y") == j ) {
+      $("#ver"+i).css({
+        top: dim*(j-1)+m*j+"px",
+      })
+    }
+  }
+}
+
+
+function onClick() {
+  var newDim = $(this).width();
+  //variazione di grandezza
+  AugDim = newDim*mal-newDim;
+  newDim = newDim*mal;
+  $(this).css({
+    width: newDim, height: newDim,
+  })
+  /*$(this).css({
+    transform: "scale("+mal+","+mal+")"
+  })*/
+
+  //prende il numero di click su quell'elemento
+  var Click = $(this).data("click");
+  //ci aggiunge il click attuale
+  Click = Click + 1;
+  //risalva il click aggiornato
+  $(this).data({"click": Click});
+
+  //chi ha x o y più piccoli deve spostarsi a sx, chi ha x o y più grande deve andare a dx
+  for(i=1; i<21; i++) {
+
+    var p = $("#ver"+i);
+    var position = p.position();
+
+    var iDim = $("#ver"+i).width();
+
+    for(j=1; j<6; j++) {
+      if($("#ver"+i).data("y") == $(this).data("y")) {
+        if($("#ver"+i).data("x") > $(this).data("x")) {
+          $("#ver"+i).css({
+            left: position.left+iDim/2+(AugDim-m)/2*j+"px",
+          })
+        } else if ($("#ver"+i).data("x") < $(this).data("x")) {
+          $("#ver"+i).css({
+            left: position.left+iDim/2-(AugDim-m)/2*j+"px",
+          })
+        }
+      }
+     }
+     for(j=1; j<5; j++) {
+       if($("#ver"+i).data("x") == $(this).data("x")) {
+         if($("#ver"+i).data("y") > $(this).data("y") ) {
+           $("#ver"+i).css({
+             top: position.top+iDim/2+(AugDim-m)/2*j+"px",
+           })
+         } else if ($("#ver"+i).data("y") < $(this).data("y")) {
+           $("#ver"+i).css({
+             top: position.top+iDim/2-(AugDim-m)/2*j+"px",
+           })
+         }
+       }
+     }
+
+     if($(this).data("click") > 2) {
+       for(j=1; j<5; j++) {
+           if($("#ver"+i).data("y") < $(this).data("y") ) {
+             $("#ver"+i).css({
+               top: position.top+iDim/2-1*j+"px",
+             })
+           } else if ($("#ver"+i).data("y") > $(this).data("y")) {
+             $("#ver"+i).css({
+               top: position.top+iDim/2+1*j+"px",
+             })
+           }
+       }
+     }
+
+  /*  for(j=1; j<6; j++) {
+      if($("#ver"+i).data("x") > $(this).data("x")) {
+        $("#ver"+i).css({
+          left: position.left+(AugDim-m)/2*j+"px",
+        })
+      } else if ($("#ver"+i).data("x") < $(this).data("x")) {
+        $("#ver"+i).css({
+          left: position.left-(AugDim-m)/2*j+"px",
+        })
+      }
+    }
+    for(j=1; j<5; j++) {
+      if($("#ver"+i).data("y") > $(this).data("y") ) {
+        $("#ver"+i).css({
+          top: position.top+(AugDim-m)/2*j+"px",
+        })
+      } else if ($("#ver"+i).data("y") < $(this).data("y")) {
+        $("#ver"+i).css({
+          top: position.top-(AugDim-m)/2*j+"px",
+        })
+      }
+    }*/
+  }
+}
+
+$(".box").on("click", onClick)
+
 
 </script>
 </html>
