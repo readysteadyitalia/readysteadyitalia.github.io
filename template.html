@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>template-info</title>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script src='jquery.cookie.js'></script>
+<style>
+
+#dati {
+  display: none;
+}
+
+#ciccio {
+  width: 500px; height: 100px;
+  position:absolute;
+  top: 50%; left: 10%;
+
+  color: black;
+  font-size: 30px;
+
+}
+
+</style>
+</head>
+
+<body>
+<iframe id="dati" src="./codice-dati-3 - Copia.html">
+</iframe>
+
+<p>
+</p>
+
+<div id="ciccio">
+  scansiona il codice
+</div>
+
+</body>
+
+
+<script>
+
+var cookie1 = $.cookie("cookie1");
+var cookie1numero = parseInt(cookie1, 10);
+var cookie2 = $.cookie("cookie2");
+var cookie2numero = parseInt(cookie2, 10);
+
+/*var zero = 0;
+$.cookie("cookie2", zero);
+var cookie2 = $.cookie("cookie2")*/
+
+function update() {
+
+  var sottrazione = cookie1numero - cookie2numero;
+  console.log(cookie2numero)
+  $("p").text(cookie1numero)
+
+  if(sottrazione == 0) {
+
+    console.log("nonuguali")
+    $("#ciccio").text("rilascia il coupon e scansiona il codice")
+
+    $.cookie("cookie2", cookie1, {expires: 7});
+
+  } else if (cookie1numero != cookie2numero) {
+
+    $("#ciccio").text("grazie e arrivederci")
+    $.cookie("cookie2", cookie1, {expires: 7});
+    }
+}
+
+update();
+
+function ricarica() {
+  location.reload();
+}
+
+setInterval(ricarica, 1000);
+
+</script>
+</html>

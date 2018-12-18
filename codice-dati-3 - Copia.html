@@ -1,0 +1,338 @@
+<html>
+<head>
+
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <script src='jquery.scannerdetection.js'></script>
+  <script src='jquery.cookie.js'></script>
+  <script type="text/javascript" src="dimensioni.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./datistyle.css">
+
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <audio id="sound">
+ <source src="winter-fade.mp3" type="audio/mpeg">
+</audio>
+
+  <div id="filosofia-box">
+    <div id="ver1" class="filosofia box">
+    </div>
+    <div id="ver2" class="filosofia box">
+    </div>
+    <div id="ver3" class="filosofia box">
+    </div>
+    <div id="ver4" class="filosofia box">
+    </div>
+    <div id="ver5" class="filosofia box">
+    </div>
+  </div>
+
+  <div id="politica-box">
+    <div id="ver6" class="politica box">
+    </div>
+    <div id="ver7" class="politica box">
+    </div>
+    <div id="ver8" class="politica box">
+    </div>
+    <div id="ver9" class="politica box">
+    </div>
+    <div id="ver10" class="politica box">
+    </div>
+  </div>
+
+  <div id="societa-box">
+    <div id="ver11" class="societa box">
+    </div>
+    <div id="ver12" class="societa box">
+    </div>
+    <div id="ver13" class="societa box">
+    </div>
+    <div id="ver14" class="societa box">
+    </div>
+    <div id="ver15" class="societa box">
+    </div>
+  </div>
+
+  <div id="religione-box">
+    <div id="ver16" class="religione box">
+    </div>
+    <div id="ver17" class="religione box">
+    </div>
+    <div id="ver18" class="religione box">
+    </div>
+    <div id="ver19" class="religione box">
+    </div>
+    <div id="ver20" class="religione box">
+    </div>
+  </div>
+
+  <div id="bianco">
+  </div>
+
+  <div id="titolo">
+  </div>
+
+  <div id="logo">
+  </div>
+
+  <div id="vendita">
+  </div>
+
+  <div id="fascia">
+    <div id="scritta">
+    </div>
+  </div>
+
+</body>
+<script>
+
+//dimensione della width delle vaschette all'inizio in percentuale
+var dim = 50;
+
+//dimensione della height del div delle vaschette all'inizio in percentuale
+var dimY = 50;
+
+//margine
+var m = 8;
+
+//distanza tra le categorie
+$(".box").css({
+  margin: m/2+"px",
+})
+
+//durata dell'animazione
+function random() {
+  return Math.random()*(7-2+1) + 2
+}
+
+//fattore di ingrandimento
+var mal = [1.5, 1.2, 1.1, 1.1, 1.06, 1.05, 1.04, 1.03, 1.02, 1.02, ];
+
+for(i=1; i<11; i++) {
+  mal.push(1.01)
+}
+
+//caricamento immagini
+for(i=1; i<21; i++) {
+  $("#ver"+i).css({
+      "background-image": "url(./ver"+i+".png)",
+  })
+}
+
+//FILOSOFIA
+
+//dimensioni delle verita
+var x1;
+var x2;
+var x3;
+var x4;
+var x5;
+
+//all'inizio le dimensioni sono quelle iniziali
+x1 = dim;
+x2 = dim;
+x3 = dim;
+x4 = dim;
+x5 = dim;
+
+//associo un numero ad ogni verita
+$("#ver1").data({"num": 01, "click": 0,});
+$("#ver2").data({"num": 02, "click": 0,});
+$("#ver3").data({"num": 03, "click": 0,});
+$("#ver4").data({"num": 04, "click": 0,});
+$("#ver5").data({"num": 05, "click": 0,});
+
+//POLITICA
+
+//dimensioni delle verita
+var x6;
+var x7;
+var x8;
+var x9;
+var x10;
+
+//all'inizio le dimensioni sono quelle iniziali
+x6 = dim;
+x7 = dim;
+x8 = dim;
+x9 = dim;
+x10 = dim;
+
+//associo un numero ad ogni verita
+$("#ver6").data({"num": 06, "click": 0,});
+$("#ver7").data({"num": 07, "click": 0,});
+$("#ver8").data({"num": 08, "click": 0,});
+$("#ver9").data({"num": 09, "click": 0,});
+$("#ver10").data({"num":10, "click": 0,});
+
+//SOCIETA
+
+//dimensioni delle verita
+var x11;
+var x12;
+var x13;
+var x14;
+var x15;
+
+//all'inizio le dimensioni sono quelle iniziali
+x11 = dim;
+x12 = dim;
+x13 = dim;
+x14 = dim;
+x15 = dim;
+
+//associo un numero ad ogni verita
+$("#ver11").data({"num": 11, "click": 0,});
+$("#ver12").data({"num": 12, "click": 0,});
+$("#ver13").data({"num": 13, "click": 0,});
+$("#ver14").data({"num": 14, "click": 0,});
+$("#ver15").data({"num": 15, "click": 0,});
+
+//RELIGIONE
+
+//dimensioni delle verita
+var x16;
+var x17;
+var x18;
+var x19;
+var x20;
+
+//all'inizio le dimensioni sono quelle iniziali
+x16 = dim;
+x17 = dim;
+x18 = dim;
+x19 = dim;
+x20 = dim;
+
+//associo un numero ad ogni verita
+$("#ver16").data({"num": 16, "click": 0,});
+$("#ver17").data({"num": 17, "click": 0,});
+$("#ver18").data({"num": 18, "click": 0,});
+$("#ver19").data({"num": 19, "click": 0,});
+$("#ver20").data({"num": 20, "click": 0,});
+
+//animazione
+for(i=1; i<21; i++) {
+  $("#ver"+i).css({
+      animation: "float "+random()+"s"+" linear infinite alternate",
+  })
+}
+
+dimensioni();
+
+//---SCANSIONE---//
+
+var scannerControl = 0;
+
+
+$(document).scannerDetection({
+timeBeforeScanTest: 2000, // wait for the next character for upto 200ms
+avgTimeByChar: 100, // it's not a barcode if a character takes longer than 100ms
+onComplete: ingrandisci,
+});
+
+function ingrandisci(barcode, qty) {
+  //variabile per il cookie
+  scannerControl = scannerControl + 1;
+
+  //audio
+  var sound = document.getElementById("sound");
+  sound.play();
+
+  //ingrandimento e posizione
+  for(i = 1; i< 21; i++) {
+    if(barcode == $("#ver"+i).data("num")){
+  var Value = $("#ver"+i).data("num");
+  var volte = $("#ver"+i).data("click");
+
+  if(Value == 01) {
+    x1 = x1*mal[volte];
+  } else if (Value == 02) {
+    x2 = x2*mal[volte];
+  } else if (Value == 03) {
+    x3 = x3*mal[volte];
+  } else if (Value == 04) {
+    x4 = x4*mal[volte];
+  } else if (Value == 05) {
+    x5 = x5*mal[volte];
+  }
+  if(Value == 06) {
+    x6 = x6*mal[volte];
+  } else if (Value == 07) {
+    x7 = x7*mal[volte];
+  } else if (Value == 08) {
+    x8 = x8*mal[volte];
+  } else if (Value == 09) {
+    x9 = x9*mal[volte];
+  } else if (Value == 10) {
+    x10 = x10*mal[volte];
+  }
+  if(Value == 11) {
+    x11 = x11*mal[volte];
+  } else if (Value == 12) {
+    x12 = x12*mal[volte];
+  } else if (Value == 13) {
+    x13 = x13*mal[volte];
+  } else if (Value == 14) {
+    x14 = x14*mal[volte];
+  } else if (Value == 15) {
+    x15 = x15*mal[volte];
+  }
+  if(Value == 16) {
+    x16 = x16*mal[volte];
+  } else if (Value == 17) {
+    x17 = x17*mal[volte];
+  } else if (Value == 18) {
+    x18 = x18*mal[volte];
+  } else if (Value == 19) {
+    x19 = x19*mal[volte];
+  } else if (Value == 20) {
+    x20 = x20*mal[volte];
+  }
+  dimensioni();
+  //update il click
+  volte = volte + 1;
+  $("#ver"+i).data({"click": volte});
+
+  //compare il div vendita
+  $("#vendita").fadeIn().addClass("grande")
+  $("#vendita").css({
+    "background-image": "url(./ver"+i+".png)",
+  })
+
+
+  setTimeout(function() {
+    $("#vendita").fadeOut(0).removeClass("grande"),
+    $("#bianco").fadeOut(0)
+    $("#fascia").fadeOut(0)
+    $("#logo").fadeIn()
+  }, 3000)
+  //div bianco
+  $("#bianco").fadeIn()
+  $("#fascia").fadeIn()
+  $("#logo").fadeOut(0)
+}}
+
+//cookie
+$.cookie("cookie1", scannerControl, {expires: 7});
+var cookie1 = $.cookie("cookie1");
+var cookie1numero = parseInt(cookie1, 10);
+var zero = 0;
+$.cookie("cookie2", zero, {expires: 7});
+var cookie2 = $.cookie("cookie2");
+
+console.log(cookie1numero)
+
+}
+
+$(".box").on("click", ingrandisci)
+
+
+</script>
+</html>

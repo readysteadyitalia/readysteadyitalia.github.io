@@ -1,0 +1,135 @@
+body {
+  overflow: hidden;
+}
+
+#filosofia-box {
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%; height: 50%;
+
+}
+
+#politica-box {
+  position: absolute;
+  top: 0; left: 50%;
+  width: 50%; height: 50%;
+
+}
+
+#societa-box {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 50%; height: 50%;
+
+}
+
+#religione-box {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 50%; height: 50%;
+
+}
+
+.box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filosofia {
+  background-position: right bottom;
+}
+
+.politica {
+  background-position: left bottom;
+}
+
+.societa {
+  background-position: left top;
+}
+
+.religione {
+  background-position: right top;
+}
+
+@keyframes float {
+  0% {transform: translate(0px, 0px)}
+
+  100% {transform: translate(0px, -5px)}
+}
+
+#titolo {
+  position: absolute;
+  width: 100%; height: 30%;
+  top: 0; left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./vRisorsa 8.png");
+  background-position: left top;
+}
+
+#logo {
+  position: absolute;
+  width: 100%; height: 20%;
+  bottom: 0; right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./marchio.png");
+  background-position: right bottom;
+}
+
+#vendita {
+  position: absolute;
+  width: 100px; height: 100px;
+  top: 40%; left: 50%;
+  /*background-color: red;*/
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 0s;
+  background-size: contain;
+}
+
+#vendita.grande {
+  width: 300px; height: 300px;
+  transition: 1s;
+}
+
+#bianco {
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-color: white;
+  opacity: 0.8;
+  display: none;
+  transition: 1s;
+}
+
+#fascia {
+  position: absolute;
+  width: 100%; height: 10%;
+  left: 0; bottom: 10%;
+  background-color: #c32630;
+  display: none;
+}
+
+#scritta {
+  position: absolute;
+  height: 100%; width: 40%;
+  /*background-color: green;*/
+  left: 50%; top: 0;
+  background-image: url("./scritta.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-40%, 0);
+}
+
+#scritta.animazione {
+  animation: trasla 3s linear 1;
+}
+
+@keyframes trasla {
+  0% {transform: translate(-250%, 0)}
+  40% {transform: translate(-40%, 0)}
+  20% {transform: translate(-40%, 0)}
+  100% {transform: translate(200%, 0)}
+}
