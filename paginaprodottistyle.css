@@ -1,0 +1,133 @@
+
+#wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 200%;
+}
+
+@font-face {
+    font-family: coreBold;
+    src: url(./fonts/CoreSansD55Bold.otf);
+  }
+@font-face {
+    font-family: coreRegular;
+    src: url(./fonts/CoreSansD35Regular.otf);
+}
+@font-face {
+    font-family: coreBoldCn;
+    src: url(./fonts/CoreSansD57CnBold.otf);
+}
+
+
+
+.fascia{
+  position: absolute;
+    width: 100%; height: 11.7%;
+  background-position: center;
+
+}
+
+/*aggiungere 2% per avere la fascia centrata*/
+#fasciaAzzurra{
+  top:7.36%; left: 0;
+  background-color: #98c8ed;
+
+}
+#fasciaRosa{
+  top:27.72%; left: 0;
+  background-color: #f19593;
+}
+#fasciaVerde{
+  top:48.08%; left: 0;
+  background-color: #b3cf5b;
+}
+#fasciaArancione{
+  top:68.44%; left: 0;
+  background-color: #eab556;
+}
+
+
+.box {
+  position: absolute;
+  width: 16.92%; height: 15%;
+  background-position: center;
+  background-color: #ffffff;
+  border: 5px solid #c31f24;
+  border-radius: 30px 30px;
+}
+
+#contenitoreV{
+    position: absolute;
+    top: 14%; left: 0;
+    width: 100%; height: 100%;
+}
+
+
+p {
+  font-family: coreBold;
+  color: #ffffff;
+}
+
+a{ text-decoration: none;}
+
+
+.testo {
+  position: absolute;
+  font-family: coreBold;
+  color: #000000;
+  font-size:20px;
+
+
+  }
+
+#titolo{
+  position: absolute;
+  font-family: coreBoldCn;
+  color: #000000;
+  font-size:55px;
+  top: 11.17%;
+  left: 3%;
+}
+
+#prodotti-text{
+  right: 19.2%;
+}
+
+#negozio-text{
+  right: 12.2%;
+}
+
+#volantino-text{
+    right: 3.84%;
+}
+
+#footer {
+  position: absolute;
+  width: 100%; height: 8.82%;
+
+  bottom: -14%; left: 0;
+  background-color: #c3272f;
+  color: white;
+  font-size: 15px;
+}
+
+#testoFooter {
+  position: absolute;
+  left: 7.69%;
+  font-size: inherit;
+}
+
+#instagram {
+  position: absolute;
+  left: 46.15%;
+  font-size: inherit;
+}
+
+.light {
+  font-family: coreLight;
+  font-size: 15px;
+}
+
+.box {
+  cursor: pointer;
+}

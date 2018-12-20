@@ -1,0 +1,59 @@
+#cerca {
+  position: absolute;
+  top: 41.17%; left: 7.69%;
+  width: 30.76%;
+  height: 5.88%;
+  border: 5px solid #c32630;
+  border-radius: 15px;
+  font-family: coreRegular;
+  font-size: 15px;
+}
+
+#titolo {
+  position: absolute;
+  top: 23.52%; left: 7.69%;
+  font-size: 40px;
+}
+
+#button {
+  position: absolute;
+  top: 49%; left: 7.69%;
+  width: 7.69%; height: 5.88%;
+  background-position: center;
+  background-color: #c31f24;
+  border-radius: 15px 15px;
+  font-family: coreRegular;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: -100%;
+  cursor: pointer;
+}
+
+#testobutton {
+  position: absolute;
+  top: 49%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#negoziovicino {
+  position:absolute;
+  bottom: 23.52%; left: 7.69%;
+  display: none;
+}
+
+#map {
+  position: absolute;
+  width: 38.46%; height: 35.29%;
+  top: 41.17%; left: 53.84%;
+  display: none;
+}
+
+#cercatesto {
+  position: absolute;
+  top: 42.5%; left: 9%;
+  opacity: 0.5;
+  font-family: coreRegular;
+  font-size: 15px;
+}

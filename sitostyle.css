@@ -1,0 +1,61 @@
+#banner {
+  position: absolute;
+  width: 100%; height: 35.29%;
+  top: 8.82%; left: 0;
+  background-image: url("./links/eRisorsa 7.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#banner.due {
+  transition: 1s;
+  background-size: contain;
+  background-color:  #c3272f;
+  background-position: center top;
+  background-image: url("./links/eRisorsa 19.png");
+}
+
+#p1 {
+  position: absolute;
+  font-size: 30px;
+  top: 62%; left: 7.69%;
+}
+
+#slide {
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%; height: 50%;
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-image: url("./links/eRisorsa 8.png");
+  }
+
+#frecciasx {
+  position: absolute;
+  top: 0; left: 0;
+  width: 7.69%; height: 50%;
+}
+
+#frecciasx.appari {
+  background-image: url("./links/eRisorsa 17.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+}
+
+#frecciadx {
+  position: absolute;
+  right: 0; top: 0;
+  width: 7.69%; height: 50%;
+}
+
+#frecciadx.appari {
+  background-image: url("./links/eRisorsa 18.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: auto;
+}

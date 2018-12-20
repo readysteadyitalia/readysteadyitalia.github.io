@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ready Steady</title>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./sitostyle.css">
+<link rel="stylesheet" type="text/css" href="./duecentopercentostyle.css">
+<link rel="stylesheet" type="text/css" href="./footer200.css">
+
+</head>
+
+
+
+<body>
+
+<div id="wrapper">
+  <div > <a href="pagina-prodotti.html" id="prodotti-text" class="testo">
+  Prodotti
+  </a> </div>
+  <div> <a href="negozi.html" id="negozio-text" class="testo">
+  Negozi
+  </a></div>
+  <div > <a href="./links/Volantino.pdf"id="volantino-text" class="testo">
+  Volantino
+  </a></div>
+  <div id="footer" class="testo">
+    <p id="testoFooter">
+    Contatti:<br><br><span class="light">readysteadyitalia@gmail.com <br> +02 27002183</span>
+    </p>
+    <p id="instagram">
+    Seguici su: <br><br> <span class="light">Instagram <br>@readysteadyitalia</span>
+  </p>
+  </div>
+  <div id="slide">
+  </div>
+  <div id="banner">
+  </div>
+  <div id="p1" class="testo">
+    Ready Steady offre<br> verità semplici<br> e veloci da credere: <br> non serve sforzarsi<br> per trovare la verità!
+  </div>
+  <div id="frecciasx" class="freccia">
+  </div>
+  <div id="frecciadx" class="freccia">
+  </div>
+  <a href="index.html">
+  <div id="marchio">
+  </div>  </a>
+</div>
+
+</body>
+
+<script>
+
+//banner cambia
+function bannerVa() {
+  $("#banner").toggleClass("due")
+}
+setInterval(bannerVa, 10000)
+
+//frecce banner
+  $(".freccia").mouseover(function() {
+    $(this).addClass("appari")
+  }).mouseout(function() {
+    $(this).removeClass("appari")
+  }).click(bannerVa)
+
+</script>
+<script type="text/javascript" src="hoverheader.js"></script>
+
+</html>
