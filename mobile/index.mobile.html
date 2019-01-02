@@ -137,6 +137,17 @@
 
 <script>
 
+    $(document).scroll(function(event){
+   var st = $(this).scrollTop();
+   if(st > 100) {
+     $("#madonna").fadeIn()
+     $(".testo").fadeIn()
+   } else if(st < 400) {
+     $("#madonna").fadeOut()
+     $(".testo").fadeOut();
+   }
+});
+
 
 </script>
 
