@@ -1,24 +1,118 @@
 <html>
 <head>
-<meta charset="utf-8">
-<title>Ready Steady</title>
-<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Ready Steady</title>
+  <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
 
 </head>
 
+<style>
+  @font-face {
+      font-family: coreBold;
+      src: url(../fonts/CoreSansD55Bold.otf);
+    }
 
+    @font-face {
+        font-family: coreLight;
+        src: url(../fonts/CoreSansD25Light.otf);
+    }
+
+    #wrapper {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #marchio {
+      position: absolute;
+      top: 0; left: 0;
+      width: 33.33%; height: 15.78%;
+      background-image: url("./links/marchiomobile.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #linee {
+      position: absolute;
+      top: 0; right: 0;
+      width: 33.33%; height: 15.78%;
+      background-image: url("./links/linee.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      cursor: pointer;
+    }
+    #menu {
+      position: absolute;
+      top: 15.78%; left: 0;
+      width: 100%; height: 78.94%;
+      background-color: #c32630;
+      display: none;
+    }
+    .testo {
+      position: absolute;
+      font-family: coreBold;
+      color: #000000;
+      font-size:40px;
+      left: 8.33%;
+    }
+    #m1 {
+      position: absolute;
+      top: 20%; left: 0;
+    }
+    #m2 {
+      position: absolute;
+      top: 46.66%; left: 0;
+    }
+    #m3 {
+      position: absolute;
+      top: 73.33%; left: 0;
+    }
+
+    .menutesto {
+      width: 100%; height: 6.66%;
+      color: white;
+      font-size: 666%;
+      font-family: coreBold;
+      text-align: center;
+      text-decoration: none;
+    }
+</style>
 
 <body>
 
 <div id="wrapper">
-
-negoziciccio2
+  <a href="index.mobile.html">
+  <div id="marchio">
+  </div>  </a>
+  <div id="linee">
+  </div>
+  <div id="menu">
+      <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
+      <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
+      <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
+  </div>
 </div>
+
 
 </body>
 
 <script>
 
+  //MENU
+  $(document).scroll(function(event){
+   var st = $(this).scrollTop();
+   if(st > 500) {
+     $("#madonna").fadeIn()
+
+   } else if(st < 1000) {
+     $("#madonna").fadeOut()
+
+   }
+});
+
+  $("#linee").on("click", function() {
+    $("#menu").slideToggle()
+  })
 
 </script>
 
