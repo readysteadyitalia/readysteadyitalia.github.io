@@ -121,7 +121,7 @@
 
     #negoziovicino {
       position:absolute;
-      top: 73.68%; left: 16.66%;
+      top: 63.15%; left: 16.66%;
       display: none;
       font-family: coreBold;
       color: #000000;
@@ -134,6 +134,15 @@
       opacity: 0.5;
       font-family: coreRegular;
       font-size:40px;
+      pointer-events: none;
+    }
+
+    #map {
+      position:absolute;
+      top: 73.68%; left: 16.66%;
+      width: 66.66%;
+      height: 21.05%;
+      display: none;
     }
 
 </style>
@@ -154,6 +163,8 @@
   <div id="button"> <span id="testobutton"> Cerca </span> </div>
 
   <div id="negoziovicino" class="testo"> Il negozio più vicino a te è in: <br> Via Bergognone, 34, 20144 Milano MI </div>
+  <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.8635705984807!2d9.162121515091767!3d45.45240527910086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c3e5ba100051%3A0xe79c993799f1fe46!2sBASE+Milano!5e0!3m2!1sit!2sit!4v1545336274749" frameborder="0" style="border:0" allowfullscreen></iframe>
+
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
@@ -193,7 +204,7 @@
     testo = document.getElementById("cerca").value;
     if (testo != "") {
       $("#negoziovicino").fadeIn();
-      //$("#map").fadeIn()
+      $("#map").fadeIn()
     }
   }
 
