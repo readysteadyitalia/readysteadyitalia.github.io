@@ -13,8 +13,8 @@
     }
 
     @font-face {
-        font-family: coreLight;
-        src: url(../fonts/CoreSansD25Light.otf);
+        font-family: coreBoldCn;
+        src: url(./fonts/CoreSansD57CnBold.otf);
     }
 
     #wrapper {
@@ -76,6 +76,62 @@
       text-align: center;
       text-decoration: none;
     }
+    #cerca {
+      position: absolute;
+      top: 42.10%; left: 16.66%;
+      width: 66.66%; height: 5.26%;
+      border: 5px solid #c32630;
+      border-radius: 15px;
+      font-family: coreRegular;
+      font-size: 15px;
+    }
+
+    #titolo {
+      position: absolute;
+      top: 21.05%; left: 16.66%;
+      font-size: 666%;
+      font-family: coreBoldCn;
+    }
+
+    #button {
+      position: absolute;
+      top: 49%; left: 16.66%;
+      width: 16.66%; height: 5.26%;
+      background-position: center;
+      background-color: #c31f24;
+      border-radius: 15px 15px;
+      font-family: coreRegular;
+      text-align: center;
+      color: #ffffff;
+      vertical-align: middle;
+      font-size: 20px;
+      line-height: -100%;
+      cursor: pointer;
+    }
+
+    #testobutton {
+      position: absolute;
+      top: 49%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #negoziovicino {
+      position:absolute;
+      top: 73.68%; left: 16.66%;
+      display: none;
+      font-family: coreBold;
+      color: #000000;
+      font-size:40px;
+
+    }
+    #cercatesto {
+      position: absolute;
+      top: 43%; left: 20%;
+      opacity: 0.5;
+      font-family: coreRegular;
+      font-size: 15px;
+    }
+
 </style>
 
 <body>
@@ -86,14 +142,20 @@
   </div>  </a>
   <div id="linee">
   </div>
+  <div id="titolo" class="testo"> NEGOZI </div>
+  <input type="text" name="firstname" value="" id="cerca">
+    <span id="cercatesto" class="testo">Inserisci qui il tuo indirizzo</span>
+  </input>
+
+  <div id="button"> <span id="testobutton"> Cerca </span> </div>
+
+  <div id="negoziovicino" class="testo"> Il negozio più vicino a te è in: <br> Via Bergognone, 34, 20144 Milano MI </div>
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
       <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
   </div>
 </div>
-
-
 </body>
 
 <script>
@@ -114,6 +176,30 @@
     $("#menu").slideToggle()
   })
 
+  //Cerca
+  var click = 0;
+
+  $("#cerca").mouseover(function() {
+    $("#cercatesto").fadeOut(0)
+  }).mouseout(function() {
+    if(click == 0) {
+      $("#cercatesto").fadeIn(0)
+    }
+  }).click(function() {
+    $("#cercatesto").fadeOut(0);
+    click = 1;
+  })
+
+  function ricerca() {
+    var testo;
+    testo = document.getElementById("cerca").value;
+    if (testo != "") {
+      $("#negoziovicino").fadeIn();
+      //$("#map").fadeIn()
+    }
+  }
+
+  $("#button").on("click", ricerca)
 </script>
 
 </html>
