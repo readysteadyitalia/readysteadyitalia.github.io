@@ -16,6 +16,10 @@
         font-family: coreBoldCn;
         src: url(../fonts/CoreSansD57CnBold.otf);
     }
+    @font-face {
+        font-family: coreRegular;
+        src: url(../fonts/CoreSansD35Regular.otf);
+    }
 
     #wrapper {
       position: absolute;
@@ -179,13 +183,7 @@
   //Cerca
   var click = 0;
 
-  $("#cerca").mouseover(function() {
-    $("#cercatesto").fadeOut(0)
-  }).mouseout(function() {
-    if(click == 0) {
-      $("#cercatesto").fadeIn(0)
-    }
-  }).click(function() {
+  $("#cerca").click(function() {
     $("#cercatesto").fadeOut(0);
     click = 1;
   })
