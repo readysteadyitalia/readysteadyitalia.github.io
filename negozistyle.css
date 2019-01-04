@@ -41,13 +41,13 @@
 
 #negoziovicino {
   position:absolute;
-  bottom: 23.52%; left: 7.69%;
+  top: 81%; left: 7.69%;
   display: none;
 }
 
 #map {
   position: absolute;
-  width: 38.46%; height: 35.29%;
+  width: 38.46%; height: 47.05%;
   top: 41.17%; left: 53.84%;
   display: none;
 }
