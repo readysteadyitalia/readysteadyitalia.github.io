@@ -229,8 +229,8 @@ $(window).resize(function() {
         newWindowHeight = $(window).height();
     if( newWindowHeight < lastWindowHeight && newWindowWidth == lastWindowWidth) {
         $("#button").addClass("giu")
-        $("#negoziovicino").fadeOut();
-        $("#map").fadeOut()
+        $("#negoziovicino").fadeOut(0);
+        $("#map").fadeOut(0)
     }
     if( newWindowHeight > lastWindowHeight && newWindowWidth == lastWindowWidth ) {
 
