@@ -10,7 +10,7 @@
 
 #banner.due {
   transition: 1s;
-  background-size: contain;
+  background-size: cover;
   background-color:  #c3272f;
   background-position: center top;
   background-image: url("./links/eRisorsa 19.png");
@@ -24,12 +24,12 @@
 
 #slide {
     position: absolute;
-    top: 50%; left: 0;
-    width: 100%; height: 50%;
-    background-size: cover;
-    background-position: right top;
+    top: 50%; right: -69.23%;
+    width: 69.23%; height: 50%;
+    background-size: contain;
+    background-position: right center;
     background-repeat: no-repeat;
-    background-image: url("./links/eRisorsa 8.png");
+    background-image: url("./links/dio.png");
   }
 
 #frecciasx {

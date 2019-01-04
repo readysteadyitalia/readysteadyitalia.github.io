@@ -26,8 +26,8 @@ body{
 
 #marchio {
   position: absolute;
-  top: 1.47%; left: 3.84%;
-  width: 8%; height: 4%;
+  top: 2%; left: 3.84%;
+  width: 72px; height: 72px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("./links/marchio.png")
@@ -50,16 +50,30 @@ a{
 
   }
 
+#testoHeader {
+  position: absolute;
+  top: 0; right: 1%;
+  width: 250px; height: 5.88%;
+}
+
 #prodotti-text{
-  right: 19.2%; top: 2.94%;
+  position: relative;
+  right: 21.7%; top: 50%;
+  transform: translate(0, -50%);
 }
 
 #negozio-text{
-  right: 12.2%; top: 2.94%;
+  position: relative;
+  right: 12.2%; top: 50%;
+  transform: translate(0, -50%);
+
 }
 
 #volantino-text{
-    right: 3.84%; top: 2.94%;
+    position: relative;
+    right: 3.84%; top: 50%;
+    transform: translate(0, -50%);
+
 }
 
 .rosso {
