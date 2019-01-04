@@ -65,7 +65,7 @@
   }
 
   #banner.due {
-    transition: 1s;
+    background-size: contain;
     background-image: url("./links/banner2.png");
   }
 
@@ -219,6 +219,16 @@
   }
 
   setTimeout(bannerVa, 10000)
+
+  var controlBanner = 0;
+  var lastScrollLeft = 0;
+  //swipe
+  $("#banner").scroll(function(event){
+   var st = $(this).scrollLeft();
+   if(st != lastScrollLeft) {
+     bannerVa();
+   }
+});
 
 </script>
 
