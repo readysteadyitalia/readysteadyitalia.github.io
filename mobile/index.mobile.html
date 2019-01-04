@@ -64,6 +64,11 @@
     background-repeat: no-repeat;
   }
 
+  #banner.due {
+    transition: 1s;
+    background-image: url("./links/banner2.png");
+  }
+
   #madonna {
     position: absolute;
     bottom: 2.63%; right: -100%;
@@ -204,6 +209,16 @@
     $("#menu").slideToggle()
   })
 
+  //BANNER
+  var timer;
+  //banner cambia
+  function bannerVa() {
+    clearTimeout(timer)
+    $("#banner").toggleClass("due")
+    timer = setTimeout(bannerVa, 10000)
+  }
+
+  setTimeout(bannerVa, 10000)
 
 </script>
 
