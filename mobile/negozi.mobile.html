@@ -205,11 +205,10 @@
   $("#cerca").click(function() {
     $("#cercatesto").fadeOut(0);
     click = 1;
-    $("#button").addClass("giu")
+
   })
 
   function ricerca() {
-    $("#button").removeClass("giu")
     var testo;
     testo = document.getElementById("cerca").value;
     if (testo != "") {
@@ -219,6 +218,27 @@
   }
 
   $("#button").on("click", ricerca)
+
+  //tastiera
+  var lastWindowWidth = $(window).width(),
+    lastWindowHeight = $(window).height();
+
+$(window).resize(function() {
+
+    var newWindowWidth = $(window).width(),
+        newWindowHeight = $(window).height();
+    if( newWindowHeight < lastWindowHeight && newWindowWidth == lastWindowWidth) {
+        $("#button").addClass("giu")
+    }
+    if( newWindowHeight > lastWindowHeight && newWindowWidth == lastWindowWidth ) {
+
+        $("#button").removeClass("giu")
+    }
+
+    lastWindowWidth = newWindowWidth;
+    lastWindowHeight = newWindowHeight;
+
+});
 </script>
 
 </html>
