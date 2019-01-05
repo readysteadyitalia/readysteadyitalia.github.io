@@ -60,7 +60,7 @@
     width: 100%; height: 35.8%;
     background-image: url("./links/banner.png");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
   }
 
@@ -176,6 +176,27 @@
     transition: 0.5s;
     opacity: 0.5;
   }
+
+  #frecciasx {
+    position: absolute;
+    top: 0; left: 5.55;
+    width: 5.55%; height: 50%;
+    background-image: url("../links/eRisorsa 17.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #frecciadx {
+    position: absolute;
+    right: 5.55; top: 0;
+    width: 5.55%; height: 50%;
+    background-image: url("../links/eRisorsa 18.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
 </style>
 <body>
   <div id="wrapper" class="noSelect">
@@ -212,6 +233,10 @@
       </div>
       <div id="pall2" class="pall opacita">
       </div>
+    </div>
+    <div id="frecciasx" class="freccia">
+    </div>
+    <div id="frecciadx" class="freccia">
     </div>
   </div>
 </body>
@@ -251,17 +276,8 @@
 
   timer = setTimeout(bannerVa, 10000)
 
-  var controlBanner = 0;
-  var lastScrollLeft = 0;
-  //swipe
-  $(document).scroll(function(event){
-    console.log("ciao")
-   var st = $(this).scrollLeft();
-   if(st != lastScrollLeft) {
-     bannerVa();
-     lastScrollLeft = st;
-   }
-});
+  //frecce banner
+    $(".freccia").click(bannerVa)
 
 </script>
 
