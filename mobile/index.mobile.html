@@ -57,7 +57,7 @@
   #banner {
     position: absolute;
     top: 7.89%; left: 0;
-    width: 100%; height: 39.47%;
+    width: 100%; height: 36.84%;
     background-image: url("./links/banner.png");
     background-size: cover;
     background-position: center;
@@ -249,17 +249,18 @@
     timer = setTimeout(bannerVa, 10000)
   }
 
-  setTimeout(bannerVa, 10000)
+  timer = setTimeout(bannerVa, 10000)
 
   var controlBanner = 0;
   var lastScrollLeft = 0;
   //swipe
-  $("#banner").scroll(function(event){
+  $(document).scroll(function(event){
+    console.log("ciao")
    var st = $(this).scrollLeft();
    if(st != lastScrollLeft) {
      bannerVa();
+     lastScrollLeft = st;
    }
-   lastScrollLeft = st;
 });
 
 </script>
