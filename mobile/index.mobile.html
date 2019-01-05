@@ -53,7 +53,9 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
-    cursor: pointer;
+  }
+  #linee.frecciamenu {
+    background-image: url("./links/frecciamenu.png");
   }
   #banner {
     position: absolute;
@@ -264,7 +266,8 @@
   //MENU
   $("#linee").on("click", function() {
     $("#menu").slideToggle();
-    $(".freccia").fadeToggle();
+    $("#menu").toggleClass("frecciamenu");
+    $(".freccia").fadeToggle(0);
   })
 
   //BANNER
