@@ -65,7 +65,7 @@
   }
 
   #banner.due {
-    background-image: url("./links/banner3.png");
+    background-image: url("./links/banner4.png");
   }
 
   #madonna {
@@ -151,6 +151,30 @@
     text-decoration: none;
   }
 
+  #pallini {
+    position: absolute;
+    height: 1.75%; width: 100%;
+    bottom: 51.75%; left: 0;
+    transform: translate(-2%, 70%);
+  }
+  .pall {
+    position: relative;
+    height: 10px; width: 10px;
+    background-color: #c32630;
+    border-radius: 50%;
+  }
+  #pall1 {
+    top: 0; left: 50%;
+    transform: translate(-80%, 50%);
+  }
+  #pall2 {
+    top: 0; left: 50%;
+    transform: translate(80%, -50%);
+  }
+
+  .opacita {
+    opacity: 0.6;
+  }
 </style>
 <body>
   <div id="wrapper" class="noSelect">
@@ -181,6 +205,12 @@
       <p id="instagram">
       Seguici su:<br><span class="light">@readysteadyitalia</span>
     </p>
+    </div>
+    <div id="pallini">
+      <div id="pall1" class="pall">
+      </div>
+      <div id="pall2" class="pall opacita">
+      </div>
     </div>
   </div>
 </body>
