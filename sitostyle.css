@@ -59,3 +59,30 @@
   cursor: pointer;
   background-size: auto;
 }
+
+#pallini {
+  position: absolute;
+  height: 5.88%; width: 100%;
+  bottom: 50%; left: 0;
+
+}
+.pall {
+  position: relative;
+  height: 10px; width: 10px;
+  background-color: #c32630;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#pall1 {
+  top: 0; left: 50%;
+  transform: translate(-80%, 320%);
+}
+#pall2 {
+  top: 0; left: 50%;
+  transform: translate(80%, 220%);
+}
+
+.opacita {
+  transition: 0.5s;
+  opacity: 0.5;
+}
