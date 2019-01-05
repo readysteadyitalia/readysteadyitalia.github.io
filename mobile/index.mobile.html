@@ -155,11 +155,11 @@
     position: absolute;
     height: 1.75%; width: 100%;
     bottom: 51.75%; left: 0;
-    transform: translate(-2%, 70%);
+    transform: translate(-2%, 100%);
   }
   .pall {
     position: relative;
-    height: 10px; width: 10px;
+    height: 20px; width: 20px;
     background-color: #c32630;
     border-radius: 50%;
   }
@@ -244,6 +244,7 @@
   function bannerVa() {
     clearTimeout(timer)
     $("#banner").toggleClass("due")
+    $(".pall").toggleClass("opacita")
     timer = setTimeout(bannerVa, 10000)
   }
 
