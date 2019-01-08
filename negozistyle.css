@@ -59,3 +59,9 @@
   font-family: coreRegular;
   font-size: 15px;
 }
+
+#cercatesto.red {
+  color: #c32630;
+  opacity: 1;
+  font-family: coreBold;
+}
