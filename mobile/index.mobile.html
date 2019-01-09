@@ -266,12 +266,12 @@
    var st = $(this).scrollTop();
    if(st > 500) {
      if(control == 0) {
-       $("#madonna").animate({right: "0"}, 1000, "easeOutQuad")
+       $("#madonna").animate({right: "0"}, 1000)
        control = 1;
      }
    } else if(st < 1000) {
      if(control == 1) {
-       $("#madonna").animate({right: "-100%"}, 1000, "easeOutQuad")
+       $("#madonna").animate({right: "-100%"}, 1000)
        control = 0;
      }
    }
