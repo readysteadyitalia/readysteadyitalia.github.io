@@ -4,6 +4,7 @@
 
 <title>Ready Steady</title>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./sitostyle.css">
 <link rel="stylesheet" type="text/css" href="./duecentopercentostyle.css">
@@ -77,12 +78,12 @@ var cambio = 0;
 function bannerVa() {
   clearTimeout(timer)
   if (cambio == 0) {
-    $("#banner2").animate({left: "0",}, tempo)
-    $("#banner").animate({left: "-100%",}, tempo)
+    $("#banner2").animate({left: "0",}, tempo, "easeInOutQuad")
+    $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad")
     cambio = 1;
   } else {
-    $("#banner2").animate({left: "100%",}, tempo)
-    $("#banner").animate({left: "0",}, tempo)
+    $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad")
+    $("#banner").animate({left: "0",}, tempo, "easeInOutQuad")
     cambio = 0;
   }
   $(".pall").toggleClass("opacita")
