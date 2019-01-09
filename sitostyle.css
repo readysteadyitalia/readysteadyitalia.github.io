@@ -8,10 +8,13 @@
   background-position: center;
 }
 
-#banner.due {
-  transition: 1s;
+#banner2 {
+  position: absolute;
+  width: 100%; height: 35.29%;
+  top: 8.82%; left: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-color:  #c3272f;
+  background-color: #c32630;
   background-position: center top;
   background-image: url("./links/eRisorsa 19.png");
 }

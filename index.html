@@ -44,6 +44,8 @@
   </div>
   <div id="banner">
   </div>
+  <div id="banner2">
+  </div>
   <div id="pallini">
     <div id="pall1" class="pall">
     </div>
@@ -66,11 +68,23 @@
 
 <script>
 
+//tempo di scorrimento delle cose
+var tempo = 900;
+//BANNER
 var timer;
 //banner cambia
+var cambio = 0;
 function bannerVa() {
   clearTimeout(timer)
-  $("#banner").toggleClass("due")
+  if (cambio == 0) {
+    $("#banner2").animate({left: "0",}, tempo)
+    $("#banner").animate({left: "-100%",}, tempo)
+    cambio = 1;
+  } else {
+    $("#banner2").animate({left: "100%",}, tempo)
+    $("#banner").animate({left: "0",}, tempo)
+    cambio = 0;
+  }
   $(".pall").toggleClass("opacita")
   timer = setTimeout(bannerVa, 10000)
 }

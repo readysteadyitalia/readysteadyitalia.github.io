@@ -67,7 +67,13 @@
     background-repeat: no-repeat;
   }
 
-  #banner.due {
+  #banner2 {
+    position: absolute;
+    top: 7.89%; left: 100%;
+    width: 100%; height: 35.8%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-image: url("./links/banner6.png");
   }
 
@@ -215,6 +221,13 @@
         <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
       </div>
     </div>
+    <div id="banner2">
+      <div id="menu">
+        <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
+        <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
+        <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
+      </div>
+    </div>
     <div id="madonna">
     </div>
     <div id="p1" class="testo">
@@ -273,9 +286,20 @@
   //BANNER
   var timer;
   //banner cambia
+  var cambio = 0;
+  //tempo di scorrimento delle cose
+  var tempo = 900;
   function bannerVa() {
     clearTimeout(timer)
-    $("#banner").toggleClass("due")
+    if (cambio == 0) {
+      $("#banner2").animate({left: "0",}, tempo)
+      $("#banner").animate({left: "-100%",}, tempo)
+      cambio = 1;
+    } else {
+      $("#banner2").animate({left: "100%",}, tempo)
+      $("#banner").animate({left: "0",}, tempo)
+      cambio = 0;
+    }
     $(".pall").toggleClass("opacita")
     timer = setTimeout(bannerVa, 10000)
   }
