@@ -4,156 +4,37 @@
 <title>Ready Steady</title>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="paginaprodottistyle.css">
 <link rel="stylesheet" type="text/css" href="duecentopercentostyle.css">
+<link rel="stylesheet" type="text/css" href="paginaprodottistyle.css">
+
 <link rel="icon" href="./links/icon.png">
 
 </head>
 <body>
 
-<div id="wrapper">
-  <div id="contenitoreV">
-  <div id="fasciaAzzurra" class="fascia"></div>
-  <div id="fasciaRosa" class="fascia"></div>
-  <div id="fasciaVerde" class="fascia"></div>
-  <div id="fasciaArancione" class="fascia"></div>
-
-  <div id="fasciaAzzurra"></div>
-  <div id="ver1" class="filosofia box">
-    <a href="pagina-scatoletta.html">
-    </a>
+  <div id="wrapper">
+    <div id="testoHeader">
+      <a href="pagina-prodotti.html" id="prodotti-text" class="testo">
+      Prodotti
+      </a>
+      <a href="negozi.html" id="negozio-text" class="testo">
+      Negozi
+      </a>
+      <a href="./links/Volantino.pdf"id="volantino-text" class="testo">
+      Volantino
+      </a>
+      
+    </div>
+    <div id="titolo" class="testo"> I PRODOTTI </div>
+    <a href="index.html">
+    <div id="marchio">
+    </div>  </a>
   </div>
-  <div id="ver2" class="filosofia box">
-  </div>
-  <div id="ver3" class="filosofia box">
-  </div>
-  <div id="ver4" class="filosofia box">
-  </div>
-  <div id="ver5" class="filosofia box">
-  </div>
-  <div id="ver6" class="politica box">
-  </div>
-  <div id="ver7" class="politica box">
-  </div>
-  <div id="ver8" class="politica box">
-  </div>
-  <div id="ver9" class="politica box">
-  </div>
-  <div id="ver10" class="politica box">
-  </div>
-  <div id="ver11" class="societa box">
-  </div>
-  <div id="ver12" class="societa box">
-  </div>
-  <div id="ver13" class="societa box">
-  </div>
-  <div id="ver14" class="societa box">
-  </div>
-  <div id="ver15" class="societa box">
-  </div>
-  <div id="ver16" class="religione box">
-  </div>
-  <div id="ver17" class="religione box">
-  </div>
-  <div id="ver18" class="religione box">
-  </div>
-  <div id="ver19" class="religione box">
-  </div>
-  <div id="ver20" class="religione box">
-  </div>
-</div>
-
-<a href="index.html">
-<div id="marchio">
-</div>  </a>
-<div id="titolo" >
-I NOSTRI PRODOTTI
- </div>
-
-
- <div id="testoHeader">
-   <a href="pagina-prodotti.html" id="prodotti-text" class="testo">
-   Prodotti
-   </a>
-   <a href="negozi.html" id="negozio-text" class="testo">
-   Negozi
-   </a>
-   <a href="./links/Volantino.pdf"id="volantino-text" class="testo">
-   Volantino
-   </a>
- </div>
-
-
-
-</div>
 
 </body>
 
 <script>
 
-
-$("#ver1").data({"x": 1, "y": 1, "num":1});
-$("#ver2").data({"x": 2, "y": 1, "num":2});
-$("#ver3").data({"x": 3, "y": 1, "num":3});
-$("#ver4").data({"x": 4, "y": 1, "num":4});
-$("#ver5").data({"x": 5, "y": 1, "num":5});
-$("#ver6").data({"x": 1, "y": 2, "num":6});
-$("#ver7").data({"x": 2, "y": 2, "num":7});
-$("#ver8").data({"x": 3, "y": 2, "num":8});
-$("#ver9").data({"x": 4, "y": 2, "num":9});
-$("#ver10").data({"x": 5, "y": 2, "num":10});
-$("#ver11").data({"x": 1, "y": 3, "num":11});
-$("#ver12").data({"x": 2, "y": 3, "num":12});
-$("#ver13").data({"x": 3, "y": 3, "num":13});
-$("#ver14").data({"x": 4, "y": 3, "num":14});
-$("#ver15").data({"x": 5, "y": 3, "num":15});
-$("#ver16").data({"x": 1, "y": 4, "num":16});
-$("#ver17").data({"x": 2, "y": 4, "num":17});
-$("#ver18").data({"x": 3, "y": 4, "num":18});
-$("#ver19").data({"x": 4, "y": 4, "num":19});
-$("#ver20").data({"x": 5, "y": 4, "num":20});
-
-var dim= 16.92;
-var dim1= 15;
-var mO= 2.45;
-var mV= 5.36;
-
-for(i=1; i<21; i++) {
-  $("#ver"+i).css({
-    "background-position": "90% -90% ",
-    "background-repeat": "no-repeat",
-    "background-size": "100% 100%",
-    "background-image":" url('./links/ver"+i+".png')"})
-  for(j=1; j<6; j++) {
-    if($("#ver"+i).data("x") == j ) {
-      $("#ver"+i).css({
-        left: dim*(j-1)+mO*j+"%",
-
-      })
-    }
-  }
-  for(j=1; j<5; j++) {
-    if($("#ver"+i).data("y") == j ) {
-      $("#ver"+i).css({
-        top: dim1*(j-1)+mV*j+"%",
-      })
-    }
-  }
-}
-
-
-$(".box").on("click", vai)
-
-function vai() {
-var Num =  $(this).data("num") ;
-for(j=1; j<21; j++ ){
-  if(Num == j)
-window.location.replace("./pagineProdottiSingoli/mano"+j+".html")
-}
-
-  console.log("ciao");
-
-}
 
 </script>
 

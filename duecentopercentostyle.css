@@ -24,6 +24,11 @@ body{
     src: url(./fonts/CoreSansD25Light.otf);
 }
 
+@font-face {
+    font-family: coreCnBold;
+    src: url(./fonts/CoreSansD57CnBold.otf);
+}
+
 #marchio {
   position: absolute;
   top: 2%; left: 3.84%;
