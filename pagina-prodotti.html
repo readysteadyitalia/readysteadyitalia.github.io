@@ -24,6 +24,11 @@
       Volantino
       </a>
     </div>
+    <div id="filcontainer">
+      <div id="prodfil"></div>
+      <div id="frecciasx1"></div>
+      <div id="frecciadx1"></div>
+    </div>
     <div id="titolo" class="testo"> I PRODOTTI </div>
     <a href="index.html">
     <div id="marchio">
@@ -33,6 +38,19 @@
 </body>
 
 <script>
+
+function createElem() {
+  for (i=0; i<5; i++) {
+    var f = "<div id='f"+i+"' class='veritadim'></div>";
+    $("#prodfil").append(f)
+    var left = i*50;
+    $("#f"+i).css({
+      left: left+"%",
+    })
+  }
+}
+
+$( window ).on( "load", createElem );
 
 
 </script>

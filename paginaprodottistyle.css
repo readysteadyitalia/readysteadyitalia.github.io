@@ -1,7 +1,44 @@
 #titolo {
   position: absolute;
-  top: 11.76%; left: 7.69%;
+  top: calc(100/34*4%); left: 7.69%;
   font-size: 40px;
   font-family: coreCnBold;
   font-size:55px;
+}
+
+#filcontainer {
+  position: absolute;
+  top: calc(100/34*5%); left: 0;
+  width: 100%; height: calc(100/34*6%);
+  background-color: red;
+}
+
+#frecciasx1 {
+  position: absolute;
+  top: 0; left: calc(100/13*4%);
+  width: 7.69%; height: 100%;
+  background-color: blue;
+}
+
+#frecciadx1 {
+  position: absolute;
+  top: 0; right: 3.84%;
+  width: 7.69%; height: 100%;
+  background-color: blue;
+}
+#prodfil {
+  position: absolute;
+  top: 0; left: calc(100/13*5%);
+  width: calc(100/26*13%); height: 100%;
+
+}
+
+.veritadim {
+  position: absolute;
+  top: 0;
+  width: 50%; height: 100%;
+  background-image: url("./links/Risorsa 20.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
