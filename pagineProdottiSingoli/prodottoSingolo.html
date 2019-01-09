@@ -13,7 +13,7 @@
     width: 46.15%;
     height: 64.70%;
     bottom: 0; right: 7.69%;
-    background-image: url("./links/Risorsa 12.png");
+    background-image: url("./links/Risorsa 15.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -27,6 +27,42 @@
     background-size: 85%;
     background-repeat: no-repeat;
     background-position: left top;
+
+  }
+
+  #frase-scatoletta {
+    position: absolute;
+    left: 8.33%; top: 20%;
+    color: white;
+    font-size: 24px;
+  }
+
+  span.light {
+    font-family: coreLight;
+    font-size: 20px;
+    line-height: 90%;
+  }
+
+  #button {
+    position: absolute;
+    top: 69%; right: 11.30%;
+    width: 15.38%; height: 5.88%;
+    background-color: white;
+    border-radius: 15px 15px;
+    font-family: coreBold;
+    text-align: center;
+    color: #684595;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: -100%;
+    cursor: pointer;
+  }
+
+  #testobutton {
+    position: absolute;
+    width: 200%;
+    top: 49%; left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 </style>
@@ -39,21 +75,26 @@
 
 <div id="wrapper">
   <div id="testoHeader">
-    <a href="pagina-prodotti.html" id="prodotti-text" class="testo">
+    <a href="../pagina-prodotti.html" id="prodotti-text" class="testo">
     Prodotti
     </a>
-    <a href="negozi.html" id="negozio-text" class="testo">
+    <a href="../negozi.html" id="negozio-text" class="testo">
     Negozi
     </a>
-    <a href="./links/Volantino.pdf"id="volantino-text" class="testo">
+    <a href="../links/Volantino.pdf"id="volantino-text" class="testo">
     Volantino
     </a>
   </div>
   <div id="indicazioni">
+    <p id="frase-scatoletta" class="testo">
+    L'amore non ha sesso. <span class="light"><br>Verità pronta da credere</span>
+    </p>
+
   </div>
   <div id="prodotto">
   </div>
-  <a href="index.html">
+  <div id="button"> <span id="testobutton">Visualizza contenuto</span> </div>
+  <a href="../index.html">
   <div id="marchio">
   </div>  </a>
 
