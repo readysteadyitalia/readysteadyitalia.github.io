@@ -48,10 +48,19 @@ function createElem() {
       left: left+"%",
     })
   }
+  for (i=2; i<5; i++) {
+    $("#f"+i).fadeToggle();
+  }
 }
 
 $( window ).on( "load", createElem );
 
+$("#prodfil").on("click", vai)
+
+function vai() {
+  console.log("cio")
+  window.location.replace("./pagineProdottiSingoli/prodottoSingolo.html")
+}
 
 </script>
 
