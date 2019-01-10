@@ -8,7 +8,7 @@
 
 #filcontainer {
   position: absolute;
-  top: calc(100/34*5%); left: 0;
+  top: calc(100/34*6%); left: 0;
   width: 100%; height: calc(100/34*6%);
 }
 
@@ -17,7 +17,7 @@
   top: 0; left: calc(100/13*4%);
   width: 7.69%; height: 100%;
   background-image: url("./links/Risorsa 21.png");
-  background-size: contain;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -28,7 +28,7 @@
   top: 0; right: 3.84%;
   width: 7.69%; height: 100%;
   background-image: url("./links/Risorsa 22.png");
-  background-size: contain;
+  background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -44,9 +44,9 @@
   position: absolute;
   top: 0;
   width: 50%; height: 100%;
-  background-size: contain;
+  background-size: 110%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 60% center;
   pointer-events: all;
 }
 
@@ -54,7 +54,7 @@
   position: absolute;
   top: 0; left: 0;
   width: calc(100/26*7%); height: 100%;
-  background-image: url("./links/manofil.png");
+  background-image: url("./links/Risorsa 23.png");
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: left center;

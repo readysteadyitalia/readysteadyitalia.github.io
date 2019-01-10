@@ -49,7 +49,7 @@ function createElem() {
     $("#f"+i).css({
       left: left+"%",
       "background-image": "url('./links/prod"+i+".png')",
-    })
+    }).addClass("f")
   }
   positionElem()
 }
@@ -82,7 +82,7 @@ $("#frecciasx1").on("click", updatePos)
 
 $( window ).on( "load", createElem );
 
-$("#prodfi").on("click", vai)
+$("#prodfil").on("click", vai)
 
 function vai() {
   console.log("cio")

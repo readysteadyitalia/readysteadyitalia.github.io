@@ -22,7 +22,7 @@
     position: absolute;
     width: 38.46%;
     height: 64.70%;
-    bottom: 0; left: 7.69%;
+    bottom: -100%; left: 7.69%;
     background-image: url("./links/mano6.png");
     background-size: 85%;
     background-repeat: no-repeat;
@@ -51,7 +51,6 @@
     border-radius: 15px 15px;
     font-family: coreBold;
     text-align: center;
-    color: #684595;
     vertical-align: middle;
     font-size: 15px;
     line-height: -100%;
@@ -61,8 +60,14 @@
   #testobutton {
     position: absolute;
     width: 200%;
+    color: #684595;
     top: 49%; left: 50%;
     transform: translate(-50%, -50%);
+    text-decoration: none;
+  }
+
+  #testobutton.rosso {
+    color: #c3272f;
   }
 
 </style>
@@ -93,7 +98,7 @@
   </div>
   <div id="prodotto">
   </div>
-  <div id="button"> <span id="testobutton">Visualizza contenuto</span> </div>
+  <div id="button"> <a href="..\libretti\contenuto-vaschette-versioneDigitale\contenuto-vaschette\libretti/slider - Copia.html" id="testobutton">Visualizza contenuto</a> </div>
   <a href="../index.html">
   <div id="marchio">
   </div>  </a>
@@ -105,6 +110,11 @@
 
 <script>
 
+$( window ).on( "load", function() {
+  $("#prodotto").animate({bottom: "0",}, 1000)
+});
+
+$("#testobutton").mouseover(function() {$(this).toggleClass("rosso")}).mouseout(function() {$(this).toggleClass("rosso")})
 
 </script>
 
