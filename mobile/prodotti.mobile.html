@@ -6,6 +6,12 @@
   <link rel="stylesheet" type="text/css" href="./header-mobile.css">
   <style>
 
+      #titolo {
+        position: absolute;
+        top: 21.05%; left: 16.66%;
+        font-size: 666%;
+        font-family: coreBoldCn;
+      }
   </style>
 </head>
 
@@ -17,7 +23,7 @@
   </div>  </a>
   <div id="linee">
   </div>
-  <div id="titolo" class="testo"> NEGOZI </div>
+  <div id="titolo" class="testo"> PRODOTTI </div>
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
@@ -29,6 +35,11 @@
 
 <script>
 
+//MENU
+$("#linee").on("click", function() {
+  $("#menu").slideToggle()
+  $("#linee").toggleClass("frecciamenu");
+})
 
 </script>
 
