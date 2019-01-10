@@ -57,7 +57,7 @@ function createElem() {
 //fa sparire i div che non si devono vedere
 function positionElem() {
   var totaldim = $("#prodfil").width();
-  var dim = totaldim;
+  var dim = totaldim-1;
   console.log(dim)
   for(i=0; i<5; i++) {
     var x = $("#f"+i).position();
