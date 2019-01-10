@@ -13,15 +13,13 @@
         font-family: coreBoldCn;
       }
 
-      #prova {
+      .v {
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-image: url("./links/Risorsa 18.png");
-        background-size: cover;
-        background-position: left 20%;
+        left: 0;
+        height: calc(100/19*6%); width: 100%;
+        background-size: 100%;
         background-repeat: no-repeat;
-        pointer-events: none;
+        background-position: center bottom;
       }
   </style>
 </head>
@@ -29,9 +27,6 @@
 <body>
 
 <div id="wrapper" class="noSelect">
-
-  <div id="prova">
-  </div>
 
   <a href="index.mobile.html">
   <div id="marchio">
@@ -55,6 +50,21 @@ $("#linee").on("click", function() {
   $("#menu").slideToggle()
   $("#linee").toggleClass("frecciamenu");
 })
+
+//VERITA
+function createVer() {
+  for (i=1; i<5; i++) {
+    var v = "<div id='v"+i+"' class='veritadim'></div>";
+    $("body").append(v)
+    var top = i*31.57;
+    $("#v"+i).css({
+      top: top+"%",
+      "background-image": "url('./links/v"+i+".png')",
+    }).addClass("v")
+  }
+}
+
+$( window ).on( "load", createVer );
 
 </script>
 
