@@ -216,14 +216,14 @@
     <div id="linee">
     </div>
     <div id="banner">
-      <div id="menu">
+      <div class="menu">
         <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
         <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
         <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
       </div>
     </div>
     <div id="banner2">
-      <div id="menu">
+      <div class="menu">
         <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
         <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
         <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
@@ -279,7 +279,7 @@
 
   //MENU
   $("#linee").on("click", function() {
-    $("#menu").slideToggle();
+    $(".menu").slideToggle();
     $("#linee").toggleClass("frecciamenu");
     $(".freccia").fadeToggle(200);
   })
