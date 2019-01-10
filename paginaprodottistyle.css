@@ -20,6 +20,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 #frecciadx1 {
@@ -30,6 +31,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 #prodfil {
   position: absolute;
@@ -42,9 +44,18 @@
   position: absolute;
   top: 0;
   width: 50%; height: 100%;
-  background-image: url("./links/Risorsa 20.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: all;
+}
+
+#manofil {
+  position: absolute;
+  top: 0; left: 0;
+  width: calc(100/26*7%); height: 100%;
+  background-image: url("./links/manofil.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: left center;
 }

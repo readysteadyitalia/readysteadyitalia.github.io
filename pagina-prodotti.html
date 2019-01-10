@@ -28,6 +28,7 @@
       <div id="prodfil"></div>
       <div id="frecciasx1"></div>
       <div id="frecciadx1"></div>
+      <div id="manofil"></div>
     </div>
     <div id="titolo" class="testo"> I PRODOTTI </div>
     <a href="index.html">
@@ -39,6 +40,7 @@
 
 <script>
 
+//Crea i 5 div
 function createElem() {
   for (i=0; i<5; i++) {
     var f = "<div id='f"+i+"' class='veritadim'></div>";
@@ -46,16 +48,41 @@ function createElem() {
     var left = i*50;
     $("#f"+i).css({
       left: left+"%",
+      "background-image": "url('./links/prod"+i+".png')",
     })
   }
-  for (i=2; i<5; i++) {
-    $("#f"+i).fadeToggle();
+  positionElem()
+}
+
+//fa sparire i div che non si devono vedere
+function positionElem() {
+  var totaldim = $("#prodfil").width();
+  var dim = totaldim;
+  console.log(dim)
+  for(i=0; i<5; i++) {
+    var x = $("#f"+i).position();
+    if( x.left > dim) {
+        $("#f"+i).fadeOut(0);
+    } else {
+      $("#f"+i).fadeIn(0);
+    } console.log(x.left)
   }
 }
 
+function updatePos() {
+
+    var x2 = $("#f1").position();
+    $("#f1").animate({left: "calc("+x2.left+"px-50%)"}, 1000)
+    console.log(x2.left)
+
+  //positionElem()
+}
+
+$("#frecciasx1").on("click", updatePos)
+
 $( window ).on( "load", createElem );
 
-$("#prodfil").on("click", vai)
+$("#prodfi").on("click", vai)
 
 function vai() {
   console.log("cio")
