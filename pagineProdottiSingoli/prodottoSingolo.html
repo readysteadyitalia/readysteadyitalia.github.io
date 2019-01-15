@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <title>Ready Steady</title>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../jquery.cookie.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./centopercentostyle.css">
 
@@ -13,7 +14,6 @@
     width: 46.15%;
     height: 64.70%;
     bottom: 0; right: 7.69%;
-    background-image: url("./links/Risorsa 29.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -99,11 +99,11 @@
     Volantino
     </a>
   </div>
-  <div id="indicazioni">
-    <p id="frase-scatoletta" class="testo">
-    L'amore non ha sesso. <span class="light"><br>Verità pronta da credere</span>
-    </p>
 
+  <div id="inficca">
+  </div>
+
+  <div id="indicazioni">
   </div>
   <div id="prodotto">
   </div>
@@ -111,16 +111,22 @@
   <a href="../index.html">
   <div id="marchio">
   </div>  </a>
-  <div id="quantita">Quantità: 1</div>
-
 </div>
 
 </body>
 
 <script>
 
+$("#inficca").html("<iframe style='display: none' src='../pagina-prodotti.html'></iframe>")
+
+var cookie = $.cookie("cookieNum");
+console.log(cookie)
+
 $( window ).on( "load", function() {
   $("#prodotto").animate({bottom: "0",}, 1000)
+  $("#indicazioni").css({
+    "background-image": "url('./links/ind"+cookie+".png')",
+  })
 });
 
 $("#testobutton").mouseover(function() {$(this).toggleClass("rosso")}).mouseout(function() {$(this).toggleClass("rosso")})

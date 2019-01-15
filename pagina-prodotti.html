@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <title>Ready Steady</title>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="./jquery.cookie.js"></script>
 
 <link rel="stylesheet" type="text/css" href="duecentopercentostyle.css">
 <link rel="stylesheet" type="text/css" href="paginaprodottistyle.css">
@@ -85,7 +86,7 @@ function createElem() {
     var piccoli3 = "<div id='ver"+i+"' class='v"+num+"'></div>";
     $("#container3").append(piccoli3)
     $("#ver"+i).addClass("piccoli")
-    var prodotto3 = "<div id='prod"+i+"' class='vaschetta'<a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a>></div>";
+    var prodotto3 = "<div id='prod"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
     $("#ver"+i).append(prodotto3)
   }
 
@@ -109,6 +110,11 @@ function createElem() {
   var prodotto20 = "<div id='prod20' class='vaschettaGrande'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
   $("#ver20").append(prodotto20)
 
+  //numero ad ogni prodotto
+  for(i=1;i<21;i++) {
+    $("#prod"+i).data({"num": i});
+  }
+
   //carica immagini + il link
   for(i=1; i<21; i++) {
     $("#ver"+i).css({
@@ -120,7 +126,9 @@ function createElem() {
       "background-repeat": "no-repeat",
       "background-position": "center",
     }).click(function(){
-       window.location=$(this).find("a").attr("href"); return false; //link
+      var thisNum = $(this).data("num")
+      $.cookie("cookieNum", thisNum, {expires: 7});
+      window.location=$(this).find("a").attr("href"); return false; //link
     });
   }
 }
