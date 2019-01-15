@@ -1,0 +1,86 @@
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+@font-face {
+    font-family: coreBold;
+    src: url(../../../fonts/CoreSansD55Bold.otf);
+  }
+
+@font-face {
+    font-family: coreRegular;
+    src: url(../../../fonts/CoreSansD35Regular.otf);
+}
+
+@font-face {
+    font-family: coreLight;
+    src: url(../../../fonts/CoreSansD25Light.otf);
+}
+
+@font-face {
+    font-family: coreCnBold;
+    src: url(../../../fonts/CoreSansD57CnBold.otf);
+}
+
+#marchio {
+  position: absolute;
+  top: 4%; left: 3.84%;
+  width: 72px; height: 72px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./links/marchioB.png")
+}
+
+p {
+  font-family: coreBold;
+  color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.testo {
+  position: absolute;
+  font-family: coreBold;
+  color:#ffffff;
+  font-size:20px;
+
+  }
+
+  #testoHeader {
+    position: absolute;
+    top: 0; right: 1%;
+    width: 250px; height: 11.76%;
+  }
+
+  #prodotti-text{
+    position: relative;
+    right: 21.7%; top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  #negozio-text{
+    position: relative;
+    right: 12.2%; top: 50%;
+    transform: translate(0, -50%);
+
+  }
+
+  #volantino-text{
+      position: relative;
+      right: 3.84%; top: 50%;
+      transform: translate(0, -50%);
+
+  }
+
+.rosso {
+  color: #c3272f;
+}

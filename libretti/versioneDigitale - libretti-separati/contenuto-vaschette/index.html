@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>template-info</title>
+<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../../extras/jquery-ui-1.8.20.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./centopercentostyle.css">
+<style>
+
+body{
+  overflow:hidden;
+  	background-color:#3f3f3f;
+}
+
+
+
+
+#sinistra{
+  position: absolute;
+  top: 12%; left: 4%;
+  width: 100%; height: 100%;
+}
+
+#destra{
+  position: absolute;
+  top:12%; left: 54%;
+  width: 100%; height: 100%;
+}
+
+#biblio{
+  top: 90.5%; left: 45%;
+  transform: translate(0%, -50%);
+  position: absolute;
+  width: 10%; height:  5.88%;
+  background-color: white;
+ border:1px solid #ffffff;
+  border-radius: 15px 15px;
+  text-align: center;
+  color: #3f3f3f;
+  font-family;
+  vertical-align: middle;
+  font-family: coreBold;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+  <div id="testoHeader">
+    <a href="../../../pagina-prodotti.html" id="prodotti-text" class="testo">
+    Prodotti
+    </a>
+    <a href="../../../negozi.html" id="negozio-text" class="testo">
+    Negozi
+    </a>
+    <a href="../../../links/Volantino.pdf"id="volantino-text" class="testo">
+    Volantino
+    </a>
+  </div>
+
+
+
+  <a href="../../../index.html">
+  <div id="marchio">
+  </div>  </a>
+
+  <object id="sinistra" data="./libretti-sinistra/slider-sinistra.html">
+    <embed  src="slider-sinistra.html"> </embed>
+  </object>
+
+  <object id="destra" data="./libretti-destra/slider-destra.html">
+    <embed  src="slider-destra.html"> </embed>
+  </object>
+
+  <div id="biblio"> Bibliografia</div>
+
+</body>
+
+
+<script>
+</script>
+
+<script type="text/javascript" src="hoverheader.js"></script>
+
+</html>
