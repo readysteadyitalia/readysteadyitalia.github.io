@@ -37,6 +37,9 @@
     <div id="container4">
     </div>
 
+    <div id="barrasotto">
+    </div>
+
     <div id="titolo" class="testo"> I PRODOTTI </div>
     <a href="index.html">
     <div id="marchio">
@@ -50,16 +53,16 @@
 function createElem() {
   //contenitore1
   for (i=1; i<5; i++) {
-    var piccoli = "<div id='ver"+i+"' class='v"+i+"'></div>";
+    var piccoli = "<div id='ver"+i+"' class='v"+i+" link'></div>";
     $("#container1").append(piccoli)
     $("#ver"+i).addClass("piccoli")
-    var prodotto = "<div id='prod"+i+"' class='vaschetta'></div>";
+    var prodotto = "<div id='prod"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
     $("#ver"+i).append(prodotto)
   }
 
   var grande = "<div id='ver5' class='grandedx'></div>";
   $("#container1").append(grande)
-  var prodotto5 = "<div id='prod5' class='vaschettaGrande'></div>";
+  var prodotto5 = "<div id='prod5' class='vaschettaGrande'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
   $("#ver5").append(prodotto5)
 
   //contenitore2
@@ -67,13 +70,13 @@ function createElem() {
     var piccoli2 = "<div id='ver"+i+"' class='v"+i+"'></div>";
     $("#container2").append(piccoli2)
     $("#ver"+i).addClass("piccoli")
-    var prodotto2 = "<div id='prod"+i+"' class='vaschetta'></div>";
+    var prodotto2 = "<div id='prod"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
     $("#ver"+i).append(prodotto2)
   }
 
   var grande2 = "<div id='ver10' class='grandesx'></div>";
   $("#container2").append(grande2)
-  var prodotto10 = "<div id='prod10' class='vaschettaGrande'></div>";
+  var prodotto10 = "<div id='prod10' class='vaschettaGrande'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
   $("#ver10").append(prodotto10)
 
   //contenitore3
@@ -82,13 +85,13 @@ function createElem() {
     var piccoli3 = "<div id='ver"+i+"' class='v"+num+"'></div>";
     $("#container3").append(piccoli3)
     $("#ver"+i).addClass("piccoli")
-    var prodotto3 = "<div id='prod"+i+"' class='vaschetta'></div>";
+    var prodotto3 = "<div id='prod"+i+"' class='vaschetta'<a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a>></div>";
     $("#ver"+i).append(prodotto3)
   }
 
   var grande3 = "<div id='ver15' class='grandedx'></div>";
   $("#container3").append(grande3)
-  var prodotto15 = "<div id='prod15' class='vaschettaGrande'></div>";
+  var prodotto15 = "<div id='prod15' class='vaschettaGrande'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
   $("#ver15").append(prodotto15)
 
   //contenitore4
@@ -97,16 +100,16 @@ function createElem() {
     var piccoli4 = "<div id='ver"+i+"' class='v"+num+"'></div>";
     $("#container4").append(piccoli4)
     $("#ver"+i).addClass("piccoli")
-    var prodotto4 = "<div id='prod"+i+"' class='vaschetta'></div>";
+    var prodotto4 = "<div id='prod"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
     $("#ver"+i).append(prodotto4)
   }
 
   var grande4 = "<div id='ver20' class='grandesx'></div>";
   $("#container4").append(grande4)
-  var prodotto20 = "<div id='prod20' class='vaschettaGrande'></div>";
+  var prodotto20 = "<div id='prod20' class='vaschettaGrande'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
   $("#ver20").append(prodotto20)
 
-  //carica immagini
+  //carica immagini + il link
   for(i=1; i<21; i++) {
     $("#ver"+i).css({
       "background-image": "url('./links/ver"+i+".png')",
@@ -116,9 +119,12 @@ function createElem() {
       "background-size": "contain",
       "background-repeat": "no-repeat",
       "background-position": "center",
-    })
+    }).click(function(){
+       window.location=$(this).find("a").attr("href"); return false; //link
+    });
   }
 }
+
 
 $( window ).on( "load", createElem );
 

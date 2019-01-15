@@ -6,6 +6,12 @@
   font-size:55px;
 }
 
+#barrasotto {
+  position: absolute;
+  top: 100%; left: 0;
+  width: 100%; height: calc(100/13*1.5%);
+}
+
 #container1 {
   position: absolute;
   width: calc(100/13*12%);
