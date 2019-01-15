@@ -6,56 +6,91 @@
   font-size:55px;
 }
 
-#filcontainer {
+#container1 {
   position: absolute;
-  top: calc(100/34*6%); left: 0;
-  width: 100%; height: calc(100/34*6%);
+  width: calc(100/13*12%);
+  height: 18%;
+  top: calc(100/34*7%); left: 3.84%;
+  pointer-events: none;
 }
 
-#frecciasx1 {
+#container2 {
   position: absolute;
-  top: 0; left: calc(100/13*4%);
-  width: 7.69%; height: 100%;
-  background-image: url("./links/Risorsa 21.png");
+  width: calc(100/13*12%);
+  height: 18%;
+  top: calc(100/34*13%); left: 3.84%;
+  pointer-events: none;
+}
+
+.piccoli {
+  position: absolute;
+  width: 25%; height: 50%;
   background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
+  pointer-events: none;
 }
 
-#frecciadx1 {
+.grandedx {
   position: absolute;
-  top: 0; right: 3.84%;
-  width: 7.69%; height: 100%;
-  background-image: url("./links/Risorsa 22.png");
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-#prodfil {
-  position: absolute;
-  top: 0; left: calc(100/13*5%);
-  width: calc(100/26*13%); height: 100%;
-
-}
-
-.veritadim {
-  position: absolute;
-  top: 0;
   width: 50%; height: 100%;
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: 60% center;
-  pointer-events: all;
+  top: 0; right: 0;
+  background-size: 60%;
+  pointer-events: none;
 }
 
-#manofil {
-  position: absolute;
+.v1 {
   top: 0; left: 0;
-  width: calc(100/26*7%); height: 100%;
-  background-image: url("./links/Risorsa 23.png");
-  background-size: 90%;
+}
+.v2 {
+  top: 0; left: 25%;
+}
+.v3 {
+  top: 50%; left: 0;
+}
+.v4 {
+  top: 50%; left: 25%;
+}
+
+.ver {
+  background-position: right bottom;
   background-repeat: no-repeat;
-  background-position: left center;
+}
+
+.vaschetta {
+  position: absolute;
+  top: 40%; left: 40%;
+  height: 77%; width: 70%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.vaschettaGrande {
+  position: absolute;
+  top: 40%; left: 40%;
+  height: 95%; width: 100%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.vaschetta:hover {
+  position: absolute;
+  top: 40%; left: 40%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  cursor: pointer;
+  height: 82%; width: 90%;
+}
+
+.vaschettaGrande:hover {
+  position: absolute;
+  top: 40%; left: 40%;
+  height: 103%; width: 108%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+  pointer-events: all;
+  cursor: pointer;
 }
