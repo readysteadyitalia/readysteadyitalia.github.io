@@ -18,7 +18,23 @@
   position: absolute;
   width: calc(100/13*12%);
   height: 18%;
-  top: calc(100/34*13%); left: 3.84%;
+  top: calc(100/34*14%); left: 3.84%;
+  pointer-events: none;
+}
+
+#container3 {
+  position: absolute;
+  width: calc(100/13*12%);
+  height: 18%;
+  top: calc(100/34*21%); left: 3.84%;
+  pointer-events: none;
+}
+
+#container4 {
+  position: absolute;
+  width: calc(100/13*12%);
+  height: 18%;
+  top: calc(100/34*28%); left: 3.84%;
   pointer-events: none;
 }
 
@@ -37,6 +53,14 @@
   pointer-events: none;
 }
 
+.grandesx {
+  position: absolute;
+  width: 50%; height: 100%;
+  top: 0; left: 0;
+  background-size: 60%;
+  pointer-events: none;
+}
+
 .v1 {
   top: 0; left: 0;
 }
@@ -49,6 +73,20 @@
 .v4 {
   top: 50%; left: 25%;
 }
+
+.v6 {
+  top: 0; left: 50%;
+}
+.v7 {
+  top: 0; left: 75%;
+}
+.v8 {
+  top: 50%; left: 50%;
+}
+.v9 {
+  top: 50%; left: 75%;
+}
+
 
 .ver {
   background-position: right bottom;
@@ -63,6 +101,7 @@
   transform: translate(-50%, -50%);
   pointer-events: all;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .vaschettaGrande {
@@ -73,6 +112,7 @@
   transform: translate(-50%, -50%);
   pointer-events: all;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .vaschetta:hover {
@@ -83,6 +123,7 @@
   pointer-events: all;
   cursor: pointer;
   height: 82%; width: 90%;
+  transition: 0.3s;
 }
 
 .vaschettaGrande:hover {
@@ -93,4 +134,5 @@
   transform: translate(-50%, -50%);
   pointer-events: all;
   cursor: pointer;
+  transition: 0.3s;
 }
