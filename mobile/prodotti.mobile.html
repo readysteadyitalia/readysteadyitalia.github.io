@@ -26,10 +26,25 @@
         z-index: 1;
       }
 
-      #vaschette {
+      #contenitore1 {
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
+      }
+
+      #contenitore2 {
+        position: absolute;
+        top: calc(100/19*10%); left: 0;
+        width: 100%; height: 100%;
+      }
+
+      #grande {
+        position: absolute;
+        left: 0;
+        height: calc(100/19*10%); width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
       }
   </style>
 </head>
@@ -41,7 +56,13 @@
   <a href="index.mobile.html">
   <div id="marchio">
   </div>  </a>
-  <div id="vaschette">
+  <div id="contenitore1">
+  </div>
+  <div id="contenitore2">
+  </div>
+  <div id="contenitore3">
+  </div>
+  <div id="contenitore4">
   </div>
   <div id="linee">
   </div>
@@ -64,20 +85,45 @@ $("#linee").on("click", function() {
 })
 
 //VERITA
+//crea le verita
 function createVer() {
+  //contenitore1
   for (i=1; i<5; i++) {
-    var v = "<div id='v"+i+"' class='veritadim'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
-    $("#vaschette").append(v)
+    var v = "<div id='v"+i+"' class='v'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
+    $("#contenitore1").append(v)
     var top = i*31.57;
     $("#v"+i).css({
       top: top+"%",
       "background-image": "url('./links/v"+i+".png')",
-    }).addClass("v")
+    })
+  }
+  var prodottoGrande = "<div id='v5' class='grande'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
+  $("#contenitore1").append(prodottoGrande)
+
+  //contenitore2
+  for (i=6; i<10; i++) {
+    var v = "<div id='v"+i+"' class='v'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
+    $("#contenitore2").append(v)
+    var top = i*31.57;
+    $("#v"+i).css({
+      top: top+"%",
+      "background-image": "url('./links/v"+i+".png')",
+    })
+  }
+}
+
+function posizione() {
+  for (i=1; i<11; i++) {
+    var top = i*31.57;
+    $("#v"+i).css({
+      top: top+"%",
+      "background-image": "url('./links/v"+i+".png')",
+    })
   }
 }
 
 
-  $("#vaschette").click(function(){
+  $("#contenitore1").click(function(){
     console.log("ciccio")
     window.location=$(this).find("a").attr("href"); return false; //link
 });
