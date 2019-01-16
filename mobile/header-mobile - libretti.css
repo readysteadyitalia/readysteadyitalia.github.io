@@ -64,7 +64,7 @@ body{
   .testo {
     position: absolute;
     font-family: coreBold;
-    color: #ffffff;
+    color: red;
     font-size:20px;
     left: 8.33%;
   }
