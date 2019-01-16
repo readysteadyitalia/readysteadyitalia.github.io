@@ -1,0 +1,92 @@
+body{
+  background-color:#3f3f3f;
+}
+
+@font-face {
+    font-family: coreBold;
+    src: url(../fonts/CoreSansD55Bold.otf);
+  }
+
+  @font-face {
+      font-family: coreBoldCn;
+      src: url(../fonts/CoreSansD57CnBold.otf);
+  }
+  @font-face {
+      font-family: coreRegular;
+      src: url(../fonts/CoreSansD35Regular.otf);
+  }
+
+  .noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  }
+
+  #wrapper {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #marchio {
+    position: absolute;
+    top: 0; left: 0;
+    width: 33.33%; height: 15.78%;
+    background-image: url("./links/marchiomobile-libretti.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  #linee {
+    position: absolute;
+    top: 0; right: 0;
+    width: 33.33%; height: 15.78%;
+    background-image: url("./links/linee-libretti.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+  }
+  #linee.frecciamenu {
+    background-image: url("./links/frecciamenu.png");
+  }
+  #menu {
+    position: absolute;
+    top: 15.78%; left: 0;
+    width: 100%; height: 78.94%;
+    background-color: #c32630;
+    display: none;
+  }
+  .testo {
+    position: absolute;
+    font-family: coreBold;
+    color: #ffffff;
+    font-size:40px;
+    left: 8.33%;
+  }
+  #m1 {
+    position: absolute;
+    top: 20%; left: 0;
+  }
+  #m2 {
+    position: absolute;
+    top: 46.66%; left: 0;
+  }
+  #m3 {
+    position: absolute;
+    top: 73.33%; left: 0;
+  }
+
+  .menutesto {
+    width: 100%;
+    /*height: 6.66%;*/
+    color: white;
+    font-size: 666%;
+    font-family: coreBold;
+    text-align: center;
+    text-decoration: none;
+  }

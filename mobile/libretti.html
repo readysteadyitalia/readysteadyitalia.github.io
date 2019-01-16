@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <title>Ready Steady</title>
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="header-mobile.css">
+  <link rel="stylesheet" type="text/css" href="header-mobile - libretti.css">
   <style>
 
       #titolo {
@@ -13,24 +13,37 @@
         font-family: coreBoldCn;
       }
 
-      .v {
+      #libroPro {
         position: absolute;
-        left: 0;
-        height: calc(100/19*6%); width: 100%;
+        top: 35%; left: 7%;
+        height: 40%; width: 40%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
+        background-image: url('./links/1.jpg')
       }
 
-      #menu {
-        z-index: 1;
-      }
-
-      #vaschette {
+      #libroContro {
         position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+        top: 35%; right: 7%;
+        height: 40%; width: 40%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-image: url('./links/1.jpg')
       }
+
+      #bibliografia{
+        position: absolute;
+        top: 83%; left: 30%;
+        height: 5%; width: 40%;
+        background-color: none;
+        border:1px solid #ffffff;
+        border-radius: 30px 30px;
+
+      }
+
+
   </style>
 </head>
 
@@ -41,17 +54,25 @@
   <a href="index.mobile.html">
   <div id="marchio">
   </div>  </a>
-  <div id="vaschette">
-  </div>
   <div id="linee">
   </div>
-  <div id="titolo" class="testo"> PRODOTTI </div>
+  <div id="titolo" class="testo"> L'AMORE NON HA SESSO </div>
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
       <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
   </div>
-</div>
+
+  <a href="./pdf/1ProPolitica.pdf">
+    <div id="libroPro"></div>
+  </a>
+  <a href="./pdf/1ControPolitica.pdf">
+    <div id="libroContro"></div>
+  </a>
+
+  <a href="bibliografia.html">
+    <div id="bibliografia"></div>
+  </a>
 
 </body>
 
@@ -64,25 +85,7 @@ $("#linee").on("click", function() {
 })
 
 //VERITA
-function createVer() {
-  for (i=1; i<5; i++) {
-    var v = "<div id='v"+i+"' class='veritadim'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
-    $("#vaschette").append(v)
-    var top = i*31.57;
-    $("#v"+i).css({
-      top: top+"%",
-      "background-image": "url('./links/v"+i+".png')",
-    }).addClass("v")
-  }
-}
 
-
-  $("#vaschette").click(function(){
-    console.log("ciccio")
-    window.location=$(this).find("a").attr("href"); return false; //link
-});
-
-$( window ).on( "load", createVer );
 
 </script>
 
