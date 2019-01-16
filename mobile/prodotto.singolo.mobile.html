@@ -7,6 +7,46 @@
   <link rel="stylesheet" type="text/css" href="header-mobile.css">
   <style>
 
+  #indicazioni {
+    position: absolute;
+    top: calc(100/19*3%); left: 0;
+    width: 100%; height: calc(100/19*5%);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  #mano {
+    position: absolute;
+    top: 10%; right: 13%;
+    width: 120%; height: calc(100/19*18%);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+
+    #button {
+      position: absolute;
+      bottom: calc(100/19*1%); left: 50%;
+      transform: translate(-50%, 0);
+      width: 50%; height: calc(100/19*1%);
+      background-color: #c31f24;
+      border-radius: 15px 15px;
+      font-family: coreBold;
+      text-align: center;
+      vertical-align: middle;
+      line-height: -100%;
+      font-size:40px;
+    }
+
+    #testobutton {
+      position: absolute;
+      top: 49%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-decoration: none;
+      color: #ffffff;
+    }
 
   </style>
 </head>
@@ -18,8 +58,12 @@
   <div id="inficca">
   </div>
 
-  <a href="libretti.html" style="position: absolute; top: 50%; left: 50%;"> visualizza contenuto </a>
+  <div id="indicazioni">
+  </div>
+  <div id="mano">
+  </div>
 
+ <div id="button"> <a href="libretti.html" id="testobutton">Visualizza contenuto</a> </div>
   <a href="index.mobile.html">
   <div id="marchio">
   </div>  </a>
@@ -40,6 +84,19 @@ $("#inficca").html("<iframe style='display: none' src='../pagina-prodotti.html'>
 
 var cookie = $.cookie("cookieMobile");
 console.log(cookie)
+
+$("#titolo").text(cookie)
+
+$( window ).on( "load", function() {
+//  $("#prodotto").animate({bottom: "0",}, 1000)
+  $("#indicazioni").css({
+    "background-image": "url('./links/indm"+cookie+".png')",
+  })
+
+  $("#mano").css({
+      "background-image": "url('./links/mano1.png')",
+  })
+});
 
 </script>
 
