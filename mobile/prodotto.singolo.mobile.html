@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <title>Ready Steady</title>
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../jquery.cookie.js"></script>
   <link rel="stylesheet" type="text/css" href="header-mobile.css">
   <style>
 
@@ -14,15 +15,17 @@
 
 <div id="wrapper" class="noSelect">
 
+  <div id="inficca">
+  </div>
 
-    <a href="libretti.html" style="position: absolute; top: 50%; left: 50%;"> visualizza contenuto </a>
+  <a href="libretti.html" style="position: absolute; top: 50%; left: 50%;"> visualizza contenuto </a>
 
   <a href="index.mobile.html">
   <div id="marchio">
   </div>  </a>
   <div id="linee">
   </div>
-  <div id="titolo" class="testo"> PRODOttosingolo </div>
+  <div id="titolo" class="testo">  </div>
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
@@ -33,7 +36,10 @@
 </body>
 <script>
 
+$("#inficca").html("<iframe style='display: none' src='../pagina-prodotti.html'></iframe>")
 
+var cookie = $.cookie("cookieMobile");
+console.log(cookie)
 
 </script>
 

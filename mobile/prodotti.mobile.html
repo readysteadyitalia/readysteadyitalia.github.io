@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <title>Ready Steady</title>
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../jquery.cookie.js"></script>
   <link rel="stylesheet" type="text/css" href="header-mobile.css">
   <style>
 
@@ -20,10 +21,15 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
+        pointer-events: all;
       }
 
       #menu {
         z-index: 1;
+      }
+
+      .contenitore {
+        pointer-events: none;
       }
 
       #contenitore1 {
@@ -57,7 +63,9 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
+          pointer-events: all;
       }
+
   </style>
 </head>
 
@@ -68,13 +76,13 @@
   <a href="index.mobile.html">
   <div id="marchio">
   </div>  </a>
-  <div id="contenitore1">
+  <div id="contenitore1" class="contenitore">
   </div>
-  <div id="contenitore2">
+  <div id="contenitore2" class="contenitore">
   </div>
-  <div id="contenitore3">
+  <div id="contenitore3" class="contenitore">
   </div>
-  <div id="contenitore4">
+  <div id="contenitore4" class="contenitore">
   </div>
   <div id="linee">
   </div>
@@ -138,15 +146,14 @@ function posizione() {
     $("#v"+i).css({
       top: top+"%",
       "background-image": "url('./links/v"+i+".png')",
-    })
+    }).data({"num": i}).click(function(){
+      var thisNum = $(this).data("num")
+      $.cookie("cookieMobile", thisNum, {expires: 7});
+      window.location=$(this).find("a").attr("href"); return false; //link
+  });
   }
 }
 
-
-  $("#contenitore1").click(function(){
-    console.log("ciccio")
-    window.location=$(this).find("a").attr("href"); return false; //link
-});
 
 $( window ).on( "load", createVer );
 
