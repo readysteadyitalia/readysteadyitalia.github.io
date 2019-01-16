@@ -52,7 +52,7 @@ body{
     cursor: pointer;
   }
   #linee.frecciamenu {
-    background-image: url("./links/frecciamenu.png");
+    background-image: url("./links/frecciamenu-libretti.png");
   }
   #menu {
     position: absolute;
@@ -64,9 +64,9 @@ body{
   .testo {
     position: absolute;
     font-family: coreBold;
-    color: red;
-    font-size:20px;
-    left: 8.33%;
+    color: black;
+    font-size: 10px;
+    left: 7%;
   }
   #m1 {
     position: absolute;
