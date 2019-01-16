@@ -64,9 +64,6 @@
   </div>
 
  <div id="button"> <a href="libretti.html" id="testobutton">Visualizza contenuto</a> </div>
-  <a href="index.mobile.html">
-  <div id="marchio">
-  </div>  </a>
   <div id="linee">
   </div>
   <div id="titolo" class="testo">  </div>
@@ -75,11 +72,21 @@
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
       <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
   </div>
+  <a href="index.mobile.html">
+  <div id="marchio">
+  </div>  </a>
 </div>
 
 </body>
 <script>
 
+//MENU
+$("#linee").on("click", function() {
+  $("#menu").slideToggle()
+  $("#linee").toggleClass("frecciamenu");
+})
+
+//COOKIE
 $("#inficca").html("<iframe style='display: none' src='../pagina-prodotti.html'></iframe>")
 
 var cookie = $.cookie("cookieMobile");
@@ -87,6 +94,7 @@ console.log(cookie)
 
 $("#titolo").text(cookie)
 
+//ELEMENTI
 $( window ).on( "load", function() {
 //  $("#prodotto").animate({bottom: "0",}, 1000)
   $("#indicazioni").css({
