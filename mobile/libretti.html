@@ -8,35 +8,37 @@
 
       #titolo {
         position: absolute;
-        top: 18%; left: 11%;
+        top: 15%; left: 11%;
         font-size: 390%;
         font-family: coreBoldCn;
         color: white;
       }
 
-      #libroPro {
+      .libri{
         position: absolute;
-        top: 30%; left: 7%;
+        top: 34%;
         height: 40%; width: 40%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center bottom;
+
+      }
+
+      #libroPro {
+        position: absolute;
+        left: 7%;
         background-image: url('./links/1.jpg')
       }
 
       #libroContro {
         position: absolute;
-        top: 30%; right: 7%;
-        height: 40%; width: 40%;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center bottom;
+        right: 7%;
         background-image: url('./links/1.jpg')
       }
 
       .text{
         position: absolute;
-        top: 73%;
+        top: 77%;
         height: 3%; width: 20%;
         background-color: none;
         border:1px solid #ffffff;
@@ -68,10 +70,10 @@
 <body>
 
   <a href="./pdf/1ProPolitica.pdf">
-    <div id="libroPro"></div>
+    <div id="libroPro" class="libri"></div>
   </a>
   <a href="./pdf/1ControPolitica.pdf">
-    <div id="libroContro"></div>
+    <div id="libroContro" class="libri" ></div>
   </a>
 
   <a href="./pdf/1ProPolitica.pdf">
