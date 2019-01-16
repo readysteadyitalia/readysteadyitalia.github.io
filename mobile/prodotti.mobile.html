@@ -34,11 +34,11 @@
 
       #contenitore2 {
         position: absolute;
-        top: calc(100/19*10%); left: 0;
+        top: calc(100/19*4%); left: 0;
         width: 100%; height: 100%;
       }
 
-      #grande {
+      .grande {
         position: absolute;
         left: 0;
         height: calc(100/19*10%); width: 100%;
@@ -91,25 +91,18 @@ function createVer() {
   for (i=1; i<5; i++) {
     var v = "<div id='v"+i+"' class='v'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
     $("#contenitore1").append(v)
-    var top = i*31.57;
-    $("#v"+i).css({
-      top: top+"%",
-      "background-image": "url('./links/v"+i+".png')",
-    })
   }
   var prodottoGrande = "<div id='v5' class='grande'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
+
   $("#contenitore1").append(prodottoGrande)
 
   //contenitore2
   for (i=6; i<10; i++) {
     var v = "<div id='v"+i+"' class='v'><a href='./prodotto.singolo.mobile.html' style='display: block'></a></div>";
     $("#contenitore2").append(v)
-    var top = i*31.57;
-    $("#v"+i).css({
-      top: top+"%",
-      "background-image": "url('./links/v"+i+".png')",
-    })
   }
+
+  posizione()
 }
 
 function posizione() {
