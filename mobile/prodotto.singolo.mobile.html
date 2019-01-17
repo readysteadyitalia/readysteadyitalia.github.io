@@ -90,6 +90,7 @@
 $("#linee").on("click", function() {
   $("#menu").slideToggle()
   $("#linee").toggleClass("frecciamenu");
+  $("#indicazioni").fadeToggle(0);
 })
 
 //COOKIE
@@ -114,7 +115,7 @@ $("#button").append(linklibretti)
 
 //MANO si muove
 $( document ).ready(function() {
-  $("#mano").animate({right: "0",}, 1500)
+  $("#mano").animate({right: "0",}, 1000)
 });
 
 </script>
