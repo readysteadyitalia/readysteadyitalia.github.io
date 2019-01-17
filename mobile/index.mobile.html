@@ -73,9 +73,9 @@
     top: 7.89%; left: 101%;
     width: 100%; height: 35.8%;
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-image: url("./links/banner6.png");
+    background-image: url("./links/banner5.png");
   }
 
   #madonna {
@@ -98,8 +98,26 @@
     background-repeat: no-repeat;
     background-position: left top;
     font-family: coreBold;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
+  }
+
+  #instagram {
+    position: absolute;
+    bottom: calc(6.25*2%); left: 50%;
+    transform: translate(-50%, 140%);
+    text-decoration: none;
+    width: 100%;
+  }
+
+  #instaicon {
+    position: absolute;
+    background-image: url("../links/instagram.png");
+    background-repeat: no-repeat;
+    bottom: calc(6.25*2%); left: 50%;
+    transform: translate(200%, 250%);
+    width: 50px; height: 50px;
+    background-size: contain;
   }
 
   #p1 {
@@ -120,16 +138,7 @@
 
   .light {
     font-family: coreLight;
-    font-size: 30px;
-  }
-  #testoFooter {
-    position: absolute;
-    bottom: 6.25%; right: 8.33%;
-    text-align: right;
-  }
-  #instagram {
-    position: absolute;
-    bottom: 6.25%; left: 8.33%;
+    font-size: 40px;
   }
 
   .menu {
@@ -232,18 +241,16 @@
     <div id="madonna">
     </div>
     <div id="p1" class="testo">
-      Ready Steady<br>offre verità<br>semplici<br>e veloci:<br>non serve<br>sforzarsi<br>per credere!
+      Ready Steady<br>offre verità<br>semplici<br>e velocissime:<br>non serve<br>sforzarsi<br>per credere!
     </div>
     <div id="p2" class="testo">
 
     </div>
     <div id="footer">
-      <p id="testoFooter">
-      Contatti:<br><span class="light">+02 27002183<br>readysteadyitalia@gmail.com </span>
-      </p>
       <p id="instagram">
-      Seguici su:<br><span class="light">@readysteadyitalia</span>
+      Seguici su:<a style="color: white; text-decoration: none;" class="light" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
     </p>
+    <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
     </div>
     <div id="pallini">
       <div id="pall1" class="pall">
@@ -309,6 +316,11 @@
 
   //frecce banner
     $(".freccia").click(bannerVa)
+
+    //FOOTER
+    $("#footer").click(function() {
+        window.location=$(this).find("a").attr("href"); return false; //link
+    })
 
 </script>
 
