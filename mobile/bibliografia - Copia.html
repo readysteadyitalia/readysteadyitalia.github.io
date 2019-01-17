@@ -4,6 +4,7 @@
   <title>Ready Steady</title>
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../jquery.cookie.js"></script>
+  <script type="text/javascript" src="biblio-testi.json"></script>
   <link rel="stylesheet" type="text/css" href="./libretti/header-mobile - libretti.css">
   <style>
 
@@ -47,7 +48,7 @@
   </div>  </a>
   <div id="linee">
   </div>
-  <div id="titolo" class="testo"> L'AMORE NON HA SESSO </div>
+  <div id="titolo" class="testo">  </div>
   <div id="sottotitolo" class="testo"> Bibliografia </div>
   <p id="testi" class="testo"> </p>
   <div id="menu">
@@ -84,9 +85,9 @@ var text = '{"employees":[' +
 '{"firstName":"14","lastName":"Smith" },' +
 '{"firstName":"15","lastName":"Jones" }]}';
 
-var obj = JSON.parse(text);
-document.getElementById("testi").innerHTML =
-obj.employees[prova].firstName + " " + obj.employees[prova].lastName;
+var obj = JSON.parse(biblio);
+document.getElementById("titolo").innerHTML =
+obj.biblio[prova].verità;
 
 
 </script>
