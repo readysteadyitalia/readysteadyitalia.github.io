@@ -37,7 +37,7 @@ body{
     position: absolute;
     top: 0; left: 0;
     width: 33.33%; height: 15.78%;
-    background-image: url("../links/marchiomobile-libretti.png");
+    background-image: url("./links/marchiomobile-libretti.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
