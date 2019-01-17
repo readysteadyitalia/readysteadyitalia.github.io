@@ -67,16 +67,13 @@
     font-size: 18px;
   }
 
-  #testobutton.rosso {
-    color: white;
-  }
-
-  #quantita {
+  #disponibile {
     position: absolute;
-    bottom: calc(18.5%); left: calc(100/13*8%);
+    bottom: calc(100/17*1.9%); right: 12%;
     color: black;
-    font-size: 18px;
     font-family: coreRegular;
+    font-size: 15px;
+    display: none;
   }
 
 </style>
@@ -108,6 +105,7 @@
   <div id="prodotto">
   </div>
   <div id="button"> <a href="..\libretti\versioneDigitale - libretti-separati\contenuto-vaschette\index.html" id="testobutton">Visualizza contenuto</a> </div>
+  <p id="disponibile">Disponibile dal: 10/03/2019</p>
   <a href="../index.html">
   <div id="marchio">
   </div>  </a>
@@ -135,7 +133,7 @@ $( document ).ready(function() {
   $("#prodotto").animate({bottom: "0",}, 1500)
 });
 
-$("#testobutton").mouseover(function() {$(this).toggleClass("rosso")}).mouseout(function() {$(this).toggleClass("rosso")})
+$("#testobutton").mouseover(function() {$("#disponibile").fadeToggle()}).mouseout(function() {$("#disponibile").fadeToggle()})
 
 </script>
 
