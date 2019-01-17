@@ -34,12 +34,10 @@
   </div>
   <div id="redFooter"></div>
   <div id="footer" class="testo">
-    <p id="testoFooter">
-    Contatti:<br><br><span class="light">readysteadyitalia@gmail.com <br> +02 27002183</span>
-    </p>
     <p id="instagram">
-    Seguici su: <br><br> <span class="light">Instagram <br>@readysteadyitalia</span>
+    Seguici su:<a style="color: white" class="light" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
   </p>
+  <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
   </div>
   <div id="slide">
   </div>
@@ -100,7 +98,6 @@ timer = setTimeout(bannerVa, 10000)
   }).click(bannerVa)
 
   //DIO ENTRA SEMPRE UGUALE
-
   var control = 0;
 
   $(document).scroll(function(event){
@@ -145,6 +142,12 @@ timer = setTimeout(bannerVa, 10000)
      }
      lastScrollTop = st;
   });*/
+
+  //FOOTER
+  $("#footer").click(function() {
+    console.log("ciao")
+      window.location=$(this).find("a").attr("href"); return false; //link
+  })
 
 
 </script>
