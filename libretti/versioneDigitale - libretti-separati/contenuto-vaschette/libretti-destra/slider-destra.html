@@ -54,11 +54,11 @@ function loadApp() {
 
 			// Magazine width
 
-			width: 25 +'%',
+			width: 35 +'%',
 
 			// Magazine height
 
-			height:  25 +'%',
+			height:  35 +'%',
 
 			// Duration in millisecond
 
@@ -100,9 +100,12 @@ function loadApp() {
 				},
 
 				turned: function(event, page, view) {
+          var pagina = page +1;
 
 					$("#numText").text('su '+12);
-					$("#pageFld").val(page);
+
+				//	$("#pageFld").val(page);
+				$("#pageFld").val(page+'/'+ pagina);
 
 					disableControls(page);
 
@@ -127,6 +130,7 @@ function loadApp() {
 
 	});
 
+//  scrivi pagina, trova pagina
 	$("#pageFld").change(function() {
 	flipbook.turn("page", $(this).val());
 	});
