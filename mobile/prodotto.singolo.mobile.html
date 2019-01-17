@@ -22,7 +22,7 @@
 
   #mano {
     position: absolute;
-    bottom: calc(-100/19*2.3%); right: 0%;
+    bottom: calc(-100/19*2.3%); right: 200%;
     width: 100%; height: calc(100/19*18%);
     background-size: 135%;
     background-repeat: no-repeat;
@@ -110,6 +110,11 @@ $( window ).on( "load", function() {
   })
   var linklibretti = "<a href = './libretti/libretti"+cookie+".html' id='testobutton'> Visualizza contenuto</a>"
 $("#button").append(linklibretti)
+});
+
+//MANO si muove
+$( document ).ready(function() {
+  $("#mano").animate({right: "0",}, 1500)
 });
 
 </script>
