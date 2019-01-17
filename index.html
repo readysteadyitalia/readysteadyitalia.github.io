@@ -42,6 +42,7 @@
   <div id="slide">
   </div>
   <div id="banner">
+    <a href="evento.html"> </a>
   </div>
   <div id="banner2">
   </div>
@@ -145,6 +146,10 @@ timer = setTimeout(bannerVa, 10000)
 
   //FOOTER
   $("#footer").click(function() {
+      window.location=$(this).find("a").attr("href"); return false; //link
+  })
+
+  $("#banner").click(function() {
       window.location=$(this).find("a").attr("href"); return false; //link
   })
 
