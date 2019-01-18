@@ -32,6 +32,7 @@ body{
 #marchio {
   position: absolute;
   top: 2%; left: 3.84%;
+  transform: translate(-15px, 0);
   width: 72px; height: 72px;
   background-size: contain;
   background-repeat: no-repeat;

@@ -17,6 +17,10 @@
   font-size:55px;
 }
 
+#negozio-text {
+  color: #c31f24;
+}
+
 #button {
   position: absolute;
   top: 49%; left: 7.69%;
