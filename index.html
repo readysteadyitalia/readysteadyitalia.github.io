@@ -85,27 +85,30 @@ var cambio = 1;
 var video = $("#politicavideo");
 function bannerVa() {
   clearTimeout(timer)
-  console.log(cambio)
+
   if(cambio == 4) {
     cambio = 1;
+  }
+  if(cambio == 0) {
+    cambio = 3;
   }
   if(cambio == 1) {
     $("#politicavideo").get(0).pause();
     $("#banner").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
-    $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad")
-    $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").delay(tempo).fadeOut(0)
+    $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
+    $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if (cambio == 2) {
     $("#politicavideo").get(0).play();
-    $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad").delay(tempo).fadeOut(0)
+    $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner2").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
-    $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad")
+    $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if(cambio == 3) {
     $("#politicavideo").get(0).pause();
-    $("#banner").animate({left: "101%",}, tempo, "easeInOutQuad")
-    $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad").delay(tempo).fadeOut(0)
+    $("#banner").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
+    $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner3").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
   }
-
+console.log(cambio)
   $(".pall").toggleClass("opacita")
   timer = setTimeout(bannerVa, 10000)
 }
@@ -119,7 +122,7 @@ timer = setTimeout(bannerVa, 10000)
     $(this).removeClass("appari")
   })
   $("#frecciadx").click(function() {if(cambio <4) {cambio = cambio+1}; bannerVa()})
-  $("#frecciasx").click(function() {if(cambio >1) {cambio = cambio-1}; bannerVa()})
+  $("#frecciasx").click(function() {if(cambio >0) {cambio = cambio-1}; bannerVa()})
 
   //DIO ENTRA SEMPRE UGUALE
   var control = 0;
