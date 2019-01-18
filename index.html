@@ -58,6 +58,8 @@
     </div>
     <div id="pall2" class="pall opacita">
     </div>
+    <div id="pall3" class="pall opacita">
+    </div>
   </div>
   <div id="p1" class="testo">
     Ready Steady offre<br> verità semplici<br> e veloci da credere: <br> non serve sforzarsi<br> per trovare la verità!
@@ -94,22 +96,33 @@ function bannerVa() {
   }
   if(cambio == 1) {
     $("#politicavideo").get(0).pause();
+    $("#pall1").removeClass("opacita")
+    $("#pall2").addClass("opacita")
+    $("#pall3").addClass("opacita")
+    //c'è il banner 1
     $("#banner").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if (cambio == 2) {
     $("#politicavideo").get(0).play();
+    $("#pall1").addClass("opacita")
+    $("#pall2").removeClass("opacita")
+    $("#pall3").addClass("opacita")
+    //c'è il banner2
     $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner2").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if(cambio == 3) {
     $("#politicavideo").get(0).pause();
+    $("#pall1").addClass("opacita")
+    $("#pall2").addClass("opacita")
+    $("#pall3").removeClass("opacita")
+    //c'è il banner3
     $("#banner").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner3").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
   }
 console.log(cambio)
-  $(".pall").toggleClass("opacita")
   timer = setTimeout(bannerVa, 10000)
 }
 
