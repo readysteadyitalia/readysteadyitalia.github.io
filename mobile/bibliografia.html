@@ -5,7 +5,8 @@
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../jquery.cookie.js"></script>
   <script type="text/javascript" src="dati-testi.js"></script>
-  <link rel="stylesheet" type="text/css" href="./libretti/header-mobile - libretti.css">
+
+  <link rel="stylesheet" type="text/css" href="header-mobile.css">
   <style>
 
   #titolo {
@@ -13,7 +14,7 @@
     top: 17%; left: 10%;
     font-size: 250%;
     font-family: coreBoldCn;
-    color: white;
+    color: black;
   }
 
   #sottotitolo{
@@ -21,16 +22,16 @@
     top: 21%; left: 10%;
     font-size: 200%;
     font-family: coreRegular;
-    color: white;
+    color: black;
   }
   #testi{
     position: absolute;
     top: 25%; left: 10%;
     width: 80%; height: 60%;
-    font-size: 200%;
+    font-size: 250%;
     border: solid 1px red;
     font-family: coreRegular;
-    color: white;
+    color: black;
 
   }
 
@@ -64,6 +65,12 @@
 
 <script>
 
+$("#linee").on("click", function() {
+  $("#menu").slideToggle()
+  $("#linee").toggleClass("frecciamenu")
+
+})
+
 var cookie = $.cookie("cookieMobile");
 console.log(cookie);
 var prova = cookie-1
@@ -88,8 +95,12 @@ $.get( "biblio-testi.json", function( data){
 });*/
 
 var obj = JSON.parse(text);
+
 document.getElementById("titolo").innerHTML =
 obj.testi[prova].verità ;
+
+document.getElementById("testi").innerHTML =
+obj.testi[prova].testi ;
 
 
 </script>
