@@ -48,7 +48,7 @@
   </div>
   <div id="banner2">
     <div id=video>
-    <video autoplay loop id="politicavideo">
+    <video loop id="politicavideo">
     <source src="./links/politica3.mp4" type="video/mp4">
     </div>
   </div>
@@ -80,18 +80,23 @@ var tempo = 900;
 var timer;
 //banner cambia
 var cambio = 1;
+
+var video = $("#politicavideo");
 function bannerVa() {
   clearTimeout(timer)
   console.log(cambio)
   if (cambio == 2) {
+    $("#politicavideo").get(0).play();
     $("#banner2").animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad")
   } else if(cambio == 3) {
+    $("#politicavideo").get(0).pause();
     $("#banner").animate({left: "-201%",}, tempo, "easeInOutQuad")
     $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "0",}, tempo, "easeInOutQuad")
   } else if(cambio == 1) {
+    $("#politicavideo").get(0).pause();
     $("#banner").animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "201%",}, tempo, "easeInOutQuad")

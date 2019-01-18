@@ -103,9 +103,9 @@
 
 #video {
   position: absolute;
-  width: 100%; height: 80%;
-  top: 10%; left: 0;
-  transform: translate(0, -2.3%);
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  transform: translate(0, -10px);
 }
 
 #politicavideo {
@@ -114,5 +114,5 @@
   height: 100%;
   border-radius: 30px;
   transform: translate(-50%, 0);
-  border: 8px solid white;
+  border: 10px solid white;
 }
