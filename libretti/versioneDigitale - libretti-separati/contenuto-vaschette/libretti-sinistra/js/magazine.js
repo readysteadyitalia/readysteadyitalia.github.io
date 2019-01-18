@@ -48,7 +48,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'pages/politica15/a ('+page+').jpg');
+	img.attr('src', 'pages/verita15/a ('+page+').jpg');
 
 
 
