@@ -1,27 +1,97 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>template-info</title>
-<script type="text/javascript" src="jquery.min.js"></script>
+
+<title>Ready Steady</title>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="./mobile/dati-testi.js"></script>
+<link rel="stylesheet" type="text/css" href="./negozistyle.css">
+<link rel="stylesheet" type="text/css" href="./duecentopercentostyle.css">
+<link rel="icon" href="./links/icon.png">
+
 <style>
 
-#prova{
+#titolo {
   position: absolute;
-  background-color: #ffff00;
-  top: 100px; left: 100px;
-  width: 100px; height: 100px;
+  top: calc(100/34*4%); left: 7.69%;
+  font-size: 40px;
+  font-family: coreCnBold;
+  font-size:55px;
+}
+
+#sottotitolo{
+  position: absolute;
+  top: 16%; left: 7.69%;
+  font-size:25px;
+  font-family: coreRegular;
+  color: black;
+}
+#testi{
+  position: absolute;
+  top: 20%; left: 7.69%;
+  width: 80%; height: 100%;
+  font-size: 25px;
+  font-family: coreRegular;
+  color: black;
+
 }
 
 
+
 </style>
+
 </head>
 
-<body>
-  <div id="prova"></div>
-</body>
 
+
+<body>
+
+<div id="wrapper">
+
+  <div id="testoHeader">
+    <a href="pagina-prodotti.html" id="prodotti-text" class="testo">
+    Prodotti
+    </a>
+    <a href="negozi.html" id="negozio-text" class="testo">
+    Negozi
+    </a>
+    <a href="./links/Volantino.pdf"id="volantino-text" class="testo">
+    Volantino
+    </a>
+  </div>
+
+  <div id="titolo" class="testo">  </div>
+  <div id="sottotitolo" class="testo"> Bibliografia </div>
+  <p id="testi" class="testo"> </p>
+
+  <a href="index.html">
+  <div id="marchio">
+  </div>  </a>
+</div>
+
+</body>
 
 <script>
 
+
+
+var cookie = $.cookie("cookieNum");
+console.log(cookie)
+
+var prova = cookie-1
+
+var obj = JSON.parse(text);
+
+document.getElementById("titolo").innerHTML =
+obj.testi[prova].verita ;
+
+document.getElementById("testi").innerHTML =
+obj.testi[prova].testi ;
+
+
 </script>
+<script type="text/javascript" src="hoverheader.js"></script>
+
+
 </html>
