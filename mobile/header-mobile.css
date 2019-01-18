@@ -12,6 +12,11 @@
       src: url(../fonts/CoreSansD35Regular.otf);
   }
 
+  @font-face {
+      font-family: coreRegularItalic;
+      src: url(../fonts/CoreSansD35Regular-Italic.otf);
+  }
+
   .noSelect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -86,4 +91,9 @@
     font-family: coreBold;
     text-align: center;
     text-decoration: none;
+  }
+
+  .italico{
+    font-family: coreRegularItalic;
+
   }

@@ -27,9 +27,8 @@
   #testi{
     position: absolute;
     top: 25%; left: 10%;
-    width: 80%; height: 60%;
+    width: 80%; height: 100%;
     font-size: 250%;
-    border: solid 1px red;
     font-family: coreRegular;
     color: black;
 
@@ -94,10 +93,11 @@ $.get( "biblio-testi.json", function( data){
   console.log(JSONItems);
 });*/
 
+
 var obj = JSON.parse(text);
 
 document.getElementById("titolo").innerHTML =
-obj.testi[prova].verità ;
+obj.testi[prova].verita ;
 
 document.getElementById("testi").innerHTML =
 obj.testi[prova].testi ;
