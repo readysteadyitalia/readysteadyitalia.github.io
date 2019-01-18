@@ -4,16 +4,16 @@ body{
 
 @font-face {
     font-family: coreBold;
-    src: url(../fonts/CoreSansD55Bold.otf);
+    src: url(../../fonts/CoreSansD55Bold.otf);
   }
 
   @font-face {
       font-family: coreBoldCn;
-      src: url(../fonts/CoreSansD57CnBold.otf);
+      src: url(../../fonts/CoreSansD57CnBold.otf);
   }
   @font-face {
       font-family: coreRegular;
-      src: url(../fonts/CoreSansD35Regular.otf);
+      src: url(../../fonts/CoreSansD35Regular.otf);
   }
 
   .noSelect {
