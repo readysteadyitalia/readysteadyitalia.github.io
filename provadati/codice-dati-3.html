@@ -14,7 +14,7 @@
 
   .box.red {
     background: none !important;
-    border: 2.5px solid #c32630;
+    border: 3px solid #c32630;
     border-radius: 25% 25% 0 25%;
   }
 
@@ -23,6 +23,9 @@
     font-size: 10px;
     text-align: center;
     pointer-events: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -70%);
   }
 
   </style>
@@ -110,12 +113,12 @@ $(".box").css({
 })
 
 //fattore di ingrandimento
-var mal = [1, 1.5, 1.2, 1.1, 1.1, 1.06, 1.05, 1.04, 1.03, 1.02, 1.02, ];
+var mal = [1, 1.5, 1.8, 1.98, 2.178, 2.30868, 2.424114, 2.521078, 2.596710, 2.649645, 2.70161803, ];
 for(i=1; i<11; i++) {
-  mal.push(1.01)
+  mal.push(2.72863421)
 }
 
-//caricamento immagini
+//caricamento immagini+div della scritta
 for(i=1; i<21; i++) {
   var testo = "<p id='t"+i+"' class='testo'></p>"
   $("#ver"+i).css({
@@ -128,25 +131,25 @@ $("#ver1").data({"num": 01, "click": 0,});
 $("#ver2").data({"num": 02, "click": 2,});
 $("#ver3").data({"num": 03, "click": 0,});
 $("#ver4").data({"num": 04, "click": 3,});
-$("#ver5").data({"num": 05, "click": 0,});
+$("#ver5").data({"num": 05, "click": 20,});
 //associo un numero ad ogni verita
 $("#ver6").data({"num": 06, "click": 0,});
-$("#ver7").data({"num": 07, "click": 0,});
-$("#ver8").data({"num": 08, "click": 0,});
+$("#ver7").data({"num": 07, "click": 4,});
+$("#ver8").data({"num": 08, "click": 12,});
 $("#ver9").data({"num": 09, "click": 0,});
 $("#ver10").data({"num":10, "click": 0,});
 //associo un numero ad ogni verita
-$("#ver11").data({"num": 11, "click": 0,});
-$("#ver12").data({"num": 12, "click": 0,});
+$("#ver11").data({"num": 11, "click": 3,});
+$("#ver12").data({"num": 12, "click": 1,});
 $("#ver13").data({"num": 13, "click": 0,});
-$("#ver14").data({"num": 14, "click": 0,});
-$("#ver15").data({"num": 15, "click": 0,});
+$("#ver14").data({"num": 14, "click": 5,});
+$("#ver15").data({"num": 15, "click": 7,});
 //associo un numero ad ogni verita
-$("#ver16").data({"num": 16, "click": 0,});
-$("#ver17").data({"num": 17, "click": 0,});
-$("#ver18").data({"num": 18, "click": 0,});
+$("#ver16").data({"num": 16, "click": 8,});
+$("#ver17").data({"num": 17, "click": 3,});
+$("#ver18").data({"num": 18, "click": 2,});
 $("#ver19").data({"num": 19, "click": 0,});
-$("#ver20").data({"num": 20, "click": 0,});
+$("#ver20").data({"num": 20, "click": 1,});
 
 //FILOSOFIA
 
@@ -175,11 +178,11 @@ var x9;
 var x10;
 
 //all'inizio le dimensioni sono quelle iniziali
-x6 = dim;
-x7 = dim;
-x8 = dim;
-x9 = dim;
-x10 = dim;
+x6 = dim*mal[$("#ver6").data("click")];
+x7 = dim*mal[$("#ver7").data("click")];
+x8 = dim*mal[$("#ver8").data("click")];
+x9 = dim*mal[$("#ver9").data("click")];
+x10 = dim*mal[$("#ver10").data("click")];
 
 //SOCIETA
 
@@ -191,11 +194,11 @@ var x14;
 var x15;
 
 //all'inizio le dimensioni sono quelle iniziali
-x11 = dim;
-x12 = dim;
-x13 = dim;
-x14 = dim;
-x15 = dim;
+x11 = dim*mal[$("#ver11").data("click")];
+x12 = dim*mal[$("#ver12").data("click")];
+x13 = dim*mal[$("#ver13").data("click")];
+x14 = dim*mal[$("#ver14").data("click")];
+x15 = dim*mal[$("#ver15").data("click")];
 
 
 //RELIGIONE
@@ -208,21 +211,23 @@ var x19;
 var x20;
 
 //all'inizio le dimensioni sono quelle iniziali
-x16 = dim;
-x17 = dim;
-x18 = dim;
-x19 = dim;
-x20 = dim;
+x16 = dim*mal[$("#ver16").data("click")];
+x17 = dim*mal[$("#ver17").data("click")];
+x18 = dim*mal[$("#ver18").data("click")];
+x19 = dim*mal[$("#ver19").data("click")];
+x20 = dim*mal[$("#ver20").data("click")];
 
 
 
 dimensioni();
 
+
+//hover delle box
 $(".box").css({
   cursor: "pointer",
 }).mouseover(function() {
   $(this).toggleClass("red")
-  $("#t"+$(this).data("num")).text("prodotto acquistato "+$(this).data("click")+" volte")
+  $("#t"+$(this).data("num")).html("prodotto acquistato <br>"+$(this).data("click")+" volte")
 }).mouseout(function() {
   $(this).toggleClass("red")
   $("#t"+$(this).data("num")).text("")
