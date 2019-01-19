@@ -7,18 +7,18 @@ body{
 
 input{
 	text-align: center;
-	 border:1px solid #ffffff;
-	border-radius: 10px;
-	background-color: none;
-
+	 border:2px solid #ffffff;
+	border-radius: 20px 20px;
 }
+
 
 @font-face {
     font-family: coreRegular;
     src: url(../fonts/CoreSansD35Regular.otf);
 }
+
 #numText{
-	top: 79%; left: 21.5%;
+	top: 79%; left: 22.5%;
 	position: absolute;
 	width: 100px; height: 50px;
 	font-family: coreRegular;
@@ -26,19 +26,16 @@ input{
 	font-size: 20px;
 }
 
-
-
 #pageFld{
-	top: 78.5%; left: 14.5%;
+	top: 78.5%; left: 15.5%;
 	position: absolute;
 	appearance: none;
 	width: 6%;
-	height: 3.5%;
+	height: 4%;
 	background-color: #3f3f3f;
 	color: #ffffff;
 	font-size: 20px;
 }
-
 
 .magazine-viewport .container{
 	position:absolute;
