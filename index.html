@@ -45,9 +45,8 @@
     <a href="evento.html"> </a>
   </div>
   <div id="banner2">
-    <div id=video>
-    <video loop id="politicavideo">
-    <source src="./links/politica3.mp4" type="video/mp4">
+    <div id="video">
+      <iframe id="politicavideo" src="https://www.youtube.com/embed/8HM4qZ6rqfA?autoplay=1;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <div id="banner3">
@@ -84,7 +83,7 @@ var timer;
 //banner cambia
 var cambio = 1;
 
-var video = $("#politicavideo");
+
 function bannerVa() {
   clearTimeout(timer)
 
@@ -95,7 +94,6 @@ function bannerVa() {
     cambio = 3;
   }
   if(cambio == 1) {
-    $("#politicavideo").get(0).pause();
     $("#pall1").removeClass("opacita")
     $("#pall2").addClass("opacita")
     $("#pall3").addClass("opacita")
@@ -104,7 +102,6 @@ function bannerVa() {
     $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if (cambio == 2) {
-    $("#politicavideo").get(0).play();
     $("#pall1").addClass("opacita")
     $("#pall2").removeClass("opacita")
     $("#pall3").addClass("opacita")
@@ -113,7 +110,6 @@ function bannerVa() {
     $("#banner2").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if(cambio == 3) {
-    $("#politicavideo").get(0).pause();
     $("#pall1").addClass("opacita")
     $("#pall2").addClass("opacita")
     $("#pall3").removeClass("opacita")
