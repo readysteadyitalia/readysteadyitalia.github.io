@@ -15,6 +15,11 @@
         font-family: coreBoldCn;
       }
 
+      @font-face {
+          font-family: coreLight;
+          src: url(../fonts/CoreSansD25Light.otf);
+      }
+
       .v {
         position: absolute;
         left: 0;
@@ -69,8 +74,9 @@
 
       #barrasotto {
         position: absolute;
-        top: calc(100/19*142%); left: 0;
+        top: calc(100/19*150%); left: 0;
         width: 100%; height: calc(100/19*2%);
+          background-color: #c32630;
       }
 
       .categoria {
@@ -79,7 +85,29 @@
         font-size: 333%;
         top: calc(100/12*0.5%);
       }
+      #instagram {
+        position: absolute;
+        left: 47%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: inherit;
+        text-align: center;
+        width: 100%;
+        pointer-events: all;
 
+      }
+
+      #instaicon {
+        position: absolute;
+        background-image: url("../links/instagram.png");
+        background-repeat: no-repeat;
+        left: 80%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px; height: 30px;
+        background-size: contain;
+          pointer-events: all;
+          cursor: pointer;
+      }
   </style>
 </head>
 
@@ -100,11 +128,15 @@
   </div>
 
   <div id="barrasotto">
+    <p id="instagram">
+    Seguici su:<a style="color: white; font-family: coreLight;" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
+  </p>
+  <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
   </div>
 
   <div id="linee">
   </div>
-  <div id="titolo" class="testo"> PRODOTTI </div>
+  <div id="titolo" class="testo"> PRODOTTIclonclone </div>
   <div id="menu">
       <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
       <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
