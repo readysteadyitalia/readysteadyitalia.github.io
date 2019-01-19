@@ -46,7 +46,7 @@
   </div>
   <div id="banner2">
     <div id="video">
-      <iframe id="politicavideo" src="https://www.youtube.com/embed/8HM4qZ6rqfA?autoplay=1;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="politicavideo" src="https://www.youtube.com/embed/8HM4qZ6rqfA?enablejsapi=1;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <div id="banner3">
@@ -94,6 +94,7 @@ function bannerVa() {
     cambio = 3;
   }
   if(cambio == 1) {
+    toggleVideo('hide');
     $("#pall1").removeClass("opacita")
     $("#pall2").addClass("opacita")
     $("#pall3").addClass("opacita")
@@ -102,6 +103,7 @@ function bannerVa() {
     $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
     $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if (cambio == 2) {
+    toggleVideo();
     $("#pall1").addClass("opacita")
     $("#pall2").removeClass("opacita")
     $("#pall3").addClass("opacita")
@@ -110,6 +112,7 @@ function bannerVa() {
     $("#banner2").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
     $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
   } else if(cambio == 3) {
+    toggleVideo('hide');
     $("#pall1").addClass("opacita")
     $("#pall2").addClass("opacita")
     $("#pall3").removeClass("opacita")
@@ -123,6 +126,16 @@ console.log(cambio)
 }
 
 timer = setTimeout(bannerVa, 10000)
+
+//video
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("video");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+}
 
 //frecce banner
   $(".freccia").mouseover(function() {
