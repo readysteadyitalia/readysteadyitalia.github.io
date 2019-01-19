@@ -16,10 +16,6 @@
   pointer-events: none;
 }
 
-#prodotti-text {
-  color: #c31f24;
-}
-
 #container1 {
   position: absolute;
   width: calc(100/13*12%);
