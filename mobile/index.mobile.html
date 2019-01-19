@@ -340,7 +340,6 @@
     }
     if(cambio == 1) {
       toggleVideo('hide');
-      //$("#politicavideo").get(0).pause();
       $("#pall1").removeClass("opacita")
       $("#pall2").addClass("opacita")
       $("#pall3").addClass("opacita")
@@ -350,7 +349,6 @@
       $("#banner3").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
     } else if (cambio == 2) {
       toggleVideo();
-      //$("#politicavideo").get(0).play();
       $("#pall1").addClass("opacita")
       $("#pall2").removeClass("opacita")
       $("#pall3").addClass("opacita")
@@ -360,7 +358,6 @@
       $("#banner3").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
     } else if(cambio == 3) {
       toggleVideo('hide');
-      //$("#politicavideo").get(0).pause();
       $("#pall1").addClass("opacita")
       $("#pall2").addClass("opacita")
       $("#pall3").removeClass("opacita")
