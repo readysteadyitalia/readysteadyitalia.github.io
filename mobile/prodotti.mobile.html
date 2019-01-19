@@ -90,11 +90,13 @@
         left: 47%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: inherit;
+        font-size: 333%;
         text-align: center;
         width: 100%;
         pointer-events: all;
-
+        font-family: coreBold;
+        text-decoration: none;
+        color: white;
       }
 
       #instaicon {
@@ -105,8 +107,7 @@
         transform: translate(-50%, -50%);
         width: 30px; height: 30px;
         background-size: contain;
-          pointer-events: all;
-          cursor: pointer;
+        pointer-events: all;
       }
   </style>
 </head>
@@ -129,7 +130,7 @@
 
   <div id="barrasotto">
     <p id="instagram">
-    Seguici su:<a style="color: white; font-family: coreLight;" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
+    Seguici su:<a style="font-family: coreLight;" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
   </p>
   <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
   </div>
@@ -214,6 +215,11 @@ function posizione() {
 
 
 $( window ).on( "load", createVer );
+
+//FOOTER
+$("#barrasotto").click(function() {
+    window.location=$(this).find("a").attr("href"); return false; //link
+})
 
 </script>
 
