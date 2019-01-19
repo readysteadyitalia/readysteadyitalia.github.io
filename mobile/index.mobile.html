@@ -215,6 +215,10 @@
     top: 0; left: 50%;
     transform: translate(80%, 200%);
   }
+  #pall3 {
+    top: 0; left: 50%;
+    transform: translate(240%, 100%);
+  }
 
   .opacita {
     transition: 0.5s;
@@ -282,6 +286,8 @@
       </div>
       <div id="pall2" class="pall opacita">
       </div>
+      <div id="pall3" class="pall opacita">
+      </div>
     </div>
     <div id="frecciasx" class="freccia">
     </div>
@@ -337,7 +343,7 @@
       //$("#politicavideo").get(0).pause();
       $("#pall1").removeClass("opacita")
       $("#pall2").addClass("opacita")
-      //$("#pall3").addClass("opacita")
+      $("#pall3").addClass("opacita")
       //c'è il banner 1
       $("#banner").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
       $("#banner2").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
@@ -347,7 +353,7 @@
       //$("#politicavideo").get(0).play();
       $("#pall1").addClass("opacita")
       $("#pall2").removeClass("opacita")
-    //  $("#pall3").addClass("opacita")
+      $("#pall3").addClass("opacita")
       //c'è il banner2
       $("#banner").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
       $("#banner2").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
@@ -357,7 +363,7 @@
       //$("#politicavideo").get(0).pause();
       $("#pall1").addClass("opacita")
       $("#pall2").addClass("opacita")
-    //  $("#pall3").removeClass("opacita")
+      $("#pall3").removeClass("opacita")
       //c'è il banner3
       $("#banner").animate({left: "101%",}, tempo, "easeInOutQuad").fadeOut(0)
       $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
