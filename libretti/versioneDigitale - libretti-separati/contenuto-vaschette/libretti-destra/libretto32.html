@@ -100,12 +100,20 @@ function loadApp() {
 				},
 
 				turned: function(event, page, view) {
-          var pagina = page +1;
+				var paginetot = 160;
+	 			var pagina1 = page +1;
+				var pagina2 = page -1;
 
-					$("#numText").text('su '+160);
+	 		  $("#numText").text('su '+paginetot);
 
-				//	$("#pageFld").val(page);
-				$("#pageFld").val(page+'/'+ pagina);
+	 		  //	$("#pageFld").val(page);
+				if(page == paginetot || page == 1){
+	 			 	 $("#pageFld").val(page);}
+	 		  else if(page%2 == 0){
+	 			 	 $("#pageFld").val(page+'/'+ pagina1);
+	 		  } else if(page%2 != 0) {
+					$("#pageFld").val(pagina2+'/'+ page)
+				}
 
 					disableControls(page);
 
