@@ -101,7 +101,6 @@ console.log(cookie)
 
 //ELEMENTI
 $( window ).on( "load", function() {
-//  $("#prodotto").animate({bottom: "0",}, 1000)
   $("#indicazioni").css({
     "background-image": "url('./links/indm"+cookie+".png')",
   })
@@ -111,10 +110,7 @@ $( window ).on( "load", function() {
   })
   var linklibretti = "<a href = './libretti/libretti"+cookie+".html' id='testobutton'> Visualizza contenuto</a>"
 $("#button").append(linklibretti)
-});
-
-//MANO si muove
-$( document ).ready(function() {
+  //mano si muove
   $("#mano").delay(500).animate({right: "0",}, 1000)
 });
 
