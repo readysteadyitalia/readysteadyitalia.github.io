@@ -1,0 +1,141 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ready Steady</title>
+  <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="header-mobile - libretti.css">
+  <style>
+
+      #titolo {
+        position: absolute;
+        top: 17%; left: 10%;
+        font-size: 250%;
+        font-family: coreBold;
+        color: white;
+      }
+      #sottotitolo{
+        position: absolute;
+        top: 21%; left: 10%;
+        font-size: 200%;
+        font-family: coreRegular;
+        color: white;
+
+      }
+
+      .libri{
+        position: absolute;
+        top: 29%;
+        height: 45%; width: 45%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+
+      }
+
+      #libroPro {
+        position: absolute;
+        left: 5%;
+        background-image: url('./links/11pro.jpg')
+      }
+
+      #libroContro {
+        position: absolute;
+        right: 5%;
+        background-image: url('./links/11contro.jpg')
+      }
+
+      .text{
+        position: absolute;
+        background-color: none;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        font-family: coreRegular;
+        font-size: 210%;
+        line-height: 50px;
+      }
+
+      #libroProText{
+        top: 75%;
+        height: 4%; width: 20%;
+        left: 17%;
+      }
+      #libroControText{
+        top: 75%;
+        height: 4%; width: 20%;
+        right: 17%;
+      }
+
+      #bibliografia{
+        bottom: calc(100/19*1%); left: 50%;
+        transform: translate(-50%, 0);
+        height: 5.5%; width: 40%;
+        border:5px solid #ffffff;
+        background-color: white;
+        border-radius: 35px 35px;
+        line-height: 70px;
+      }
+
+      #testobutton {
+        position: absolute;
+        top: 49%; left: 50%;
+        font-size: 150%;
+        color: #3f3f3f;
+        transform: translate(-50%, -50%);
+      }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div id="wrapper" class="noSelect">
+    <a href="../pdf/1ProPolitica.pdf">
+      <div id="libroPro" class="libri"></div>
+    </a>
+    <a href="../pdf/1ControPolitica.pdf">
+      <div id="libroContro" class="libri" ></div>
+    </a>
+
+    <a href="../pdf/1ProPolitica.pdf">
+      <div id="libroProText" class="text"> Sfoglia</div>
+    </a>
+    <a href="../pdf/1ControPolitica.pdf">
+      <div id="libroControText" class="text">Sfoglia</div>
+    </a>
+
+    <a href="../bibliografia.html">
+      <div id="bibliografia" class="text"> <span id="testobutton"> Bibliografia </span> </div>
+    </a>
+
+    <a href="../index.mobile.html">
+    <div id="marchio">
+    </div>  </a>
+    <div id="linee">
+    </div>
+    <div id="titolo" class="testo"> NON C'&Egrave NESSUN DIO </div>
+    <div id="sottotitolo" class="testo"> Politica </div>
+    <div id="menu">
+        <a id="m1" class="menutesto" href="../prodotti.mobile.html">Prodotti</a>
+        <a id="m2" class="menutesto" href="../negozi.mobile.html">Negozi</a>
+        <a id="m3" class="menutesto" href="../../links/Volantino.pdf">Volantino</a>
+    </div>
+
+
+</body>
+
+<script>
+
+//MENU
+$("#linee").on("click", function() {
+  $("#menu").slideToggle()
+  $("#linee").toggleClass("frecciamenu");
+})
+
+//VERITA
+
+
+</script>
+
+</html>
