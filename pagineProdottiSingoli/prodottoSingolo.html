@@ -125,14 +125,14 @@ $("#inficca").html("<iframe style='display: none' src='../pagina-prodotti.html'>
 var cookie = $.cookie("cookieNum");
 console.log(cookie)
 
-$( window ).on( "load", function() {
+$( document ).ready(function() {
   $("#indicazioni").css({
     "background-image": "url('./links/ind"+cookie+".png')",
   })
   $("#prodotto").css({
     "background-image": "url('./links/VasMan"+cookie+".png')",
   })
-  $("#prodotto").animate({bottom: "0",}, 1500)
+  $("#prodotto").delay(500).animate({bottom: "0",}, 1500)
 });
 
 $("#testobutton").mouseover(function() {$("#disponibile").fadeToggle()}).mouseout(function() {$("#disponibile").fadeToggle()})
