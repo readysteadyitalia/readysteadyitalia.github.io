@@ -7,3 +7,20 @@
    background-color: white;
    z-index: 99; /* Higher than anything else in the document */
  }
+
+ #spinner {
+   position: absolute;
+   top: 50%; left: 50%;
+   transform-origin: center;
+   transform: translate(-50%, -50%);
+   border-radius: 25% 25% 0 25%;
+   background-color: #c32630;
+   width: 80px; height: 80px;
+   z-index: 99;
+   animation: pulse 0.8s infinite alternate;
+ }
+
+ @keyframes pulse {
+ from {width: 50px; height: 50px;}
+ to {width: 80px; height: 80px;}
+ }
