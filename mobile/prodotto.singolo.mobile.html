@@ -35,8 +35,8 @@
       bottom: calc(100/19*1%); left: 50%;
       transform: translate(-50%, 0);
       width: 43%; height: calc(100/19*1%);
-      background-color: #c31f24;
-      /*background-color: #bfbfbf;*/ /*colore del pre*/
+      /*background-color: #c31f24;*/
+      background-color: #bfbfbf;
       border-radius: 30px 30px;
       font-family: coreBold;
       text-align: center;
@@ -54,6 +54,17 @@
       width: 200%;
     }
 
+    #disponibile {
+      position: absolute;
+      top: 120%; left: 50%;
+      transform: translate(-50%, 0);
+      color: black;
+      font-family: coreRegular;
+      font-size: 30px;
+      /*display: none;*/
+      width: 200%;
+    }
+
   </style>
 </head>
 
@@ -68,7 +79,9 @@
   <div id="mano">
   </div>
 
- <div id="button" ></div>
+  <div id="button" >
+    <p id="disponibile">Disponibile dal: 18/03/2019</p>
+  </div>
   <div id="linee">
   </div>
   <div id="titolo" class="testo">  </div>
