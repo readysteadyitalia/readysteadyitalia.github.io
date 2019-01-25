@@ -78,7 +78,7 @@ function loadApp() {
 
 			// The number of pages
 
-			pages: 88,
+			pages: 56,
 
 			// Events
 
@@ -100,20 +100,22 @@ function loadApp() {
 				},
 
 				turned: function(event, page, view) {
-				var paginetot = 88;
+					var paginetot = 56;
 	 			var pagina1 = page +1;
 				var pagina2 = page -1;
 
 	 		  $("#numText").text('su '+paginetot);
 
 	 		  //	$("#pageFld").val(page);
-				if(page == paginetot || page == 1){
+	 		  if(page == paginetot || page == 1){
 	 			 	 $("#pageFld").val(page);}
 	 		  else if(page%2 == 0){
 	 			 	 $("#pageFld").val(page+'/'+ pagina1);
 	 		  } else if(page%2 != 0) {
 					$("#pageFld").val(pagina2+'/'+ page)
 				}
+
+
 
 					disableControls(page);
 
@@ -231,6 +233,7 @@ function loadApp() {
 
 	});
 
+
 	/*
 	 * Magazine sample
 	*/
@@ -281,7 +284,7 @@ function loadApp() {
 
 		// Load the page
 
-			img.attr('src', 'pages/verita28/a ('+page+').jpg');
+			img.attr('src', 'pages/verita36/a ('+page+').jpg');
 
 
 

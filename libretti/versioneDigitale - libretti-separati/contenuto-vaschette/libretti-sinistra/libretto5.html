@@ -13,9 +13,9 @@
 
 <div id="canvas">
 
-		<input type="text"  id="pageFld" >
-		<div id="numText"></div>
-	  </input>
+	<input type="text"  id="pageFld" >
+	<div id="numText"></div>
+  </input>
 	<div class="magazine-viewport">
 		<div class="container">
 			<div class="magazine">
@@ -34,6 +34,8 @@
 
 <script type="text/javascript">
 
+
+
 function loadApp() {
 
  	$('#canvas').fadeIn(1000);
@@ -51,6 +53,7 @@ function loadApp() {
 	// Create the flipbook
 
 	flipbook.turn({
+
 
 			// Magazine width
 
@@ -78,16 +81,20 @@ function loadApp() {
 
 			// The number of pages
 
-			pages: 88,
+			pages: 132,
 
 			// Events
 
 			when: {
 				turning: function(event, page, view) {
 
+
 					var book = $(this),
 					currentPage = book.turn('page'),
 					pages = book.turn('pages');
+
+
+
 
 					// Update the current URI
 
@@ -100,20 +107,20 @@ function loadApp() {
 				},
 
 				turned: function(event, page, view) {
-				var paginetot = 88;
-	 			var pagina1 = page +1;
-				var pagina2 = page -1;
+				var paginetot = 132
+				var pagina1 = page +1;
+					var pagina2 = page -1;
 
-	 		  $("#numText").text('su '+paginetot);
+		 		  $("#numText").text('su '+paginetot);
 
-	 		  //	$("#pageFld").val(page);
-				if(page == paginetot || page == 1){
-	 			 	 $("#pageFld").val(page);}
-	 		  else if(page%2 == 0){
-	 			 	 $("#pageFld").val(page+'/'+ pagina1);
-	 		  } else if(page%2 != 0) {
-					$("#pageFld").val(pagina2+'/'+ page)
-				}
+		 		  //	$("#pageFld").val(page);
+					if(page == paginetot || page == 1){
+		 			 	 $("#pageFld").val(page);}
+		 		  else if(page%2 == 0){
+		 			 	 $("#pageFld").val(page+'/'+ pagina1);
+		 		  } else if(page%2 != 0) {
+						$("#pageFld").val(pagina2+'/'+ page)
+					}
 
 					disableControls(page);
 
@@ -138,12 +145,13 @@ function loadApp() {
 
 	});
 
-//  scrivi pagina, trova pagina
+
 	$("#pageFld").change(function() {
 	flipbook.turn("page", $(this).val());
 	});
 
 
+	// Create the flipbook
 
 
 
@@ -202,9 +210,7 @@ function loadApp() {
 
 	}).click(function() {
 
-
-		$('.magazine').turn('next');
-
+	$('.magazine').turn('next');
 	});
 
 	// Events for the next button
@@ -226,9 +232,7 @@ function loadApp() {
 		$(this).removeClass('previous-button-down');
 
 	}).click(function() {
-
-			$('.magazine').turn('previous');
-
+		$('.magazine').turn('previous');
 	});
 
 	/*
@@ -281,7 +285,7 @@ function loadApp() {
 
 		// Load the page
 
-			img.attr('src', 'pages/verita28/a ('+page+').jpg');
+		img.attr('src', 'pages/verita5/a ('+page+').jpg');
 
 
 
