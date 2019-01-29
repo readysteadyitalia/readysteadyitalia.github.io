@@ -4,9 +4,10 @@
   width: 30.76%;
   height: 5.88%;
   border: 5px solid #c32630;
-  border-radius: 15px;
+  border-radius: 30px;
   font-family: coreRegular;
   font-size: 15px;
+  padding-left: 10px;
 }
 
 #titolo {
@@ -23,7 +24,7 @@
   width: 7.69%; height: 5.88%;
   background-position: center;
   background-color: #c31f24;
-  border-radius: 15px 15px;
+  border-radius: 30px;
   font-family: coreRegular;
   text-align: center;
   color: #ffffff;
@@ -54,7 +55,8 @@
 
 #cercatesto {
   position: absolute;
-  top: 42.5%; left: 9%;
+  top: 50%; left: 9%;
+  transform: translate(0, -250%);
   opacity: 0.5;
   font-family: coreRegular;
   font-size: 15px;
