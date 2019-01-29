@@ -55,8 +55,8 @@
 
 #cercatesto {
   position: absolute;
-  top: 50%; left: 9%;
-  transform: translate(0, -250%);
+  top: 41.17%; left: 9%;
+  transform: translate(0, 40%);
   opacity: 0.5;
   font-family: coreRegular;
   font-size: 15px;
