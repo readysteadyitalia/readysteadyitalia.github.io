@@ -322,14 +322,12 @@
   })
 
   //BANNER
-  var timer;
   //banner cambia
   var cambio = 1;
   //tempo di scorrimento delle cose
   var tempo = 900;
 
   function bannerVa() {
-    clearTimeout(timer)
 
     if(cambio == 4) {
       cambio = 1;
@@ -365,13 +363,8 @@
       $("#banner2").animate({left: "-101%",}, tempo, "easeInOutQuad").fadeOut(0)
       $("#banner3").fadeIn(0).animate({left: "0",}, tempo, "easeInOutQuad")
     }
-    timer = setTimeout(cambiobanner, 30000)
   }
-  function cambiobanner() {
-    cambio = cambio +1;
-    bannerVa()
-  }
-  timer = setTimeout(cambiobanner, 30000)
+
 
   //video
   function toggleVideo(state) {
