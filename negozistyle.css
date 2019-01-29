@@ -55,11 +55,15 @@
 
 #cercatesto {
   position: absolute;
-  top: 41.17%; left: 9%;
-  transform: translate(0, 40%);
+  top: 41.17%; left: 7.69%;
   opacity: 0.5;
   font-family: coreRegular;
   font-size: 15px;
+  width: 30.76%;
+  height: 5.88%;
+  padding-left: 10px;
+  pointer-events: none;
+  line-height: 250%;
 }
 
 #cercatesto.red {
