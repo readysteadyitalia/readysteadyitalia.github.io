@@ -106,7 +106,7 @@
       <div id="libroControText" class="text">Sfoglia</div>
     </a>
 
-    <a href="../bibliografia.html">
+    <a href="./bibliografia.html">
       <div id="bibliografia" class="text"> <span id="testobutton"> Bibliografia </span> </div>
     </a>
 
@@ -115,7 +115,7 @@
     </div>  </a>
     <div id="linee">
     </div>
-    <div id="titolo" class="testo"> &Egrave STATO DIO A CREARE IL bombolone </div>
+    <div id="titolo" class="testo"> &Egrave STATO DIO A CREARE lo stiker </div>
     <div id="sottotitolo" class="testo"> Religione </div>
     <div id="menu">
         <a id="m1" class="menutesto" href="../prodotti.mobile.html">Prodotti</a>
@@ -135,8 +135,11 @@ $("#linee").on("click", function() {
 })
 
 //reimposta il cookie
-var thisNum = 1;
-$.cookie("cookieMobile", thisNum, {expires: 7});
+var nuovoNum = 1;
+$.cookie("cookieBiblio", nuovoNum, {expires: 7});
+
+var cookie = $.cookie("cookieBiblio");
+console.log(cookie);
 
 
 </script>

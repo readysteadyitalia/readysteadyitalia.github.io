@@ -4,9 +4,9 @@
   <title>Ready Steady</title>
   <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="../jquery.cookie.js"></script>
-  <script type="text/javascript" src="dati-testi.js"></script>
+  <script type="text/javascript" src="../dati-testi.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="libretti/header-mobile - libretti.css">
+  <link rel="stylesheet" type="text/css" href="header-mobile - libretti.css">
   <style>
 
   #titolo {
@@ -35,15 +35,15 @@
   }
 
   #marchio {
-    background-image: url("./libretti/links/marchiomobile-biblio.png");
+    background-image: url("./links/marchiomobile-biblio.png");
   }
 
   #linee {
-    background-image: url("./libretti/links/linee-biblio.png");
+    background-image: url("./links/linee-biblio.png");
   }
 
   #linee.frecciamenu {
-    background-image: url("./libretti/links/frecciamenu-biblio.png");
+    background-image: url("./links/frecciamenu-biblio.png");
   }
 
   body{
@@ -77,9 +77,9 @@
   <div id="sottotitolo" class="testo"> Bibliografia </div>
   <p id="testi" class="testo"> </p>
   <div id="menu">
-      <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
-      <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
-      <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
+      <a id="m1" class="menutesto" href="../prodotti.mobile.html">Prodotti</a>
+      <a id="m2" class="menutesto" href="../negozi.mobile.html">Negozi</a>
+      <a id="m3" class="menutesto" href="../../links/Volantino.pdf">Volantino</a>
   </div>
 
 
@@ -95,7 +95,7 @@ $("#linee").on("click", function() {
 
 })
 
-var cookie = $.cookie("cookieMobile");
+var cookie = $.cookie("cookieBiblio");
 console.log(cookie);
 var prova = cookie-1
 
