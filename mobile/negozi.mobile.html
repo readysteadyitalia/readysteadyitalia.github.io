@@ -167,6 +167,11 @@
       display: none;
     }
 
+    #cercatesto.red {
+      color: #c32630;
+      opacity: 1;
+      font-family: coreBold;
+    }
 </style>
 
 <body>
@@ -217,6 +222,8 @@
     if (testo != "") {
       $("#negoziovicino").fadeIn();
       $("#map").fadeIn()
+    }   else {
+      $("#cercatesto").addClass("red")
     }
   }
 
