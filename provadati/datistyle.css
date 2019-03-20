@@ -1,0 +1,83 @@
+@font-face {
+    font-family: coreBold;
+    src: url(./fonts/CoreSansD55Bold.otf);
+  }
+
+@font-face {
+    font-family: coreCnHeavy;
+    src: url(./fonts/CoreSansD67CnHeavy.otf);
+  }
+
+body {
+  overflow: hidden;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+#filosofia-box {
+  position: absolute;
+  top: 0; left: 0;
+  width: 50%; height: 50%;
+
+}
+
+#politica-box {
+  position: absolute;
+  top: 0; left: 50%;
+  width: 50%; height: 50%;
+
+}
+
+#societa-box {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 50%; height: 50%;
+
+}
+
+#religione-box {
+  position: absolute;
+  top: 50%; left: 0;
+  width: 50%; height: 50%;
+
+}
+
+.box {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.filosofia {
+  background-position: right bottom;
+}
+
+.politica {
+  background-position: left bottom;
+}
+
+.societa {
+  background-position: left top;
+}
+
+.religione {
+  background-position: right top;
+}
+
+#corona {
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("./images/corona.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  top: -35px; right: -25px;
+  transform: translate(-50%, -50%);
+  transform: rotate(35deg);
+}

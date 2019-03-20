@@ -1,0 +1,378 @@
+<html>
+<head>
+
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+  <script src='jquery.cookie.js'></script>
+  <script type="text/javascript" src="dimensioni.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./datistyle.css">
+  <link rel="stylesheet" type="text/css" href="../centopercentostyle.css">
+  <script type="text/javascript" src="../hideall.js"></script>
+    <script type="text/javascript" src="./clicks.js"></script>
+    <script type="text/javascript" src="./ordinedati.js"></script>
+  <link rel="stylesheet" type="text/css" href="../hideallstyle.css">
+<link rel="icon" href="./links/icon.png">
+
+  <style>
+
+  #wrapperbox {
+     position: absolute;
+    width: 70%; height: 100%;
+    top: 5%; right: -4%;
+  }
+
+  .box.red {
+    background: none !important;
+  border: 3px solid #c32630;
+    border-radius: 25% 25% 0 25%;
+  }
+
+  #dati {
+    position: absolute;
+    width: 100%; height: 100%;
+  }
+
+  #didascalia {
+    position: absolute;
+    top: calc(100/17*7%); left: 7.69%;
+    font-family: coreBold;
+    color: black;
+    font-size: 16px;
+  }
+
+  #titolo {
+    position: absolute;
+    top: 23.52%; left: 7.69%;
+    font-size: 40px;
+    font-family: coreCnBold;
+    font-size:55px;
+  }
+
+  .testoPiccolino {
+    font-family: coreBold;
+    font-size: 10px;
+    text-align: center;
+    pointer-events: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -70%);
+    color: black;
+  }
+
+  span.red {
+    color: #c32630;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div id="hideAll"></div>
+  <div id="wrapper">
+
+    <div id="titolo">
+      CAMPIONI DI VENDITE!
+    </div>
+
+<div id="wrapperbox">
+    <div id="filosofia-box">
+      <div id="ver1" class="filosofia box">
+      </div>
+      <div id="ver2" class="filosofia box">
+      </div>
+      <div id="ver3" class="filosofia box">
+      </div>
+      <div id="ver4" class="filosofia box">
+      </div>
+      <div id="ver5" class="filosofia box">
+      </div>
+    </div>
+
+    <div id="politica-box">
+      <div id="ver6" class="politica box">
+      </div>
+      <div id="ver7" class="politica box">
+      </div>
+      <div id="ver8" class="politica box">
+      </div>
+      <div id="ver9" class="politica box">
+      </div>
+      <div id="ver10" class="politica box">
+      </div>
+    </div>
+
+    <div id="societa-box">
+      <div id="ver11" class="societa box">
+      </div>
+      <div id="ver12" class="societa box">
+      </div>
+      <div id="ver13" class="societa box">
+      </div>
+      <div id="ver14" class="societa box">
+      </div>
+      <div id="ver15" class="societa box">
+      </div>
+    </div>
+
+    <div id="religione-box">
+      <div id="ver16" class="religione box">
+      </div>
+      <div id="ver17" class="religione box">
+      </div>
+      <div id="ver18" class="religione box">
+      </div>
+      <div id="ver19" class="religione box">
+      </div>
+      <div id="ver20" class="religione box">
+      </div>
+    </div>
+    <div id="corona">
+    </div>
+</div>
+
+      <p id="didascalia">
+        Il grande evento di <span class="red">Ready Steady a Milano</span> si è concluso!<br>
+        I nostri clienti, dopo aver visitato il negozio a Base Milano, <br>
+        hanno potuto scegliere la loro verità.<br>
+        L'<span class="red">offerta speciale</span>? Un prodotto era in omaggio! <br><br>
+        Consulta qui a lato le<span class="red"> statistiche </span>di tutti i prodotti <br>che erano in vendita quel giorno.<br>
+        Una delle verità si è guadagnata una scintillante corona,<br> conquistandosi così il titolo di prodotto più acquistato.<br><br>
+        Se ti sei perso l'evento puoi comunque consultare <br>tutte le nostre verità nella pagina<a style="color:#c32630;" href="../pagina-prodotti.html"> Prodotti</a><br> e dare anche un'occhiata al loro interno!
+      </p>
+
+    <div id="testoHeader">
+      <a href="../pagina-prodotti.html" id="prodotti-text" class="testo">
+      Prodotti
+      </a>
+      <a href="../negozi.html" id="negozio-text" class="testo">
+      Negozi
+      </a>
+      <a href="../volantino/volantino/volantino/volantino.html"id="volantino-text" class="testo">
+      Volantino
+      </a>
+    </div>
+
+    <a href="../index.html">
+    <div id="marchio">
+    </div>  </a>
+  </div>
+
+
+</body>
+<script>
+
+//dimensione della width delle vaschette all'inizio in px
+var dim = 50;
+
+//corona
+//dimensione iniziale corona in px
+var coronaDim = 50;
+var coronaTop = -33;
+var coronaRight = -25;
+
+//margine
+var m = 8;
+
+//distanza tra le categorie
+$(".box").css({
+  margin: m/2+"px",
+})
+
+
+//fattore di ingrandimento
+var fact = 1.05;
+var mal = [1, 1.5, 1.8, 1.98, 2.178, 2.30868, 2.424114, 2.521078, 2.596710, 2.649645, 2.70161803, ];
+for(i=1; i<11; i++) {
+  mal.push(2.72863421)
+}
+
+//caricamento immagini+div della scritta
+
+for(i=1; i<21; i++) {
+  var testo = "<p id='t"+i+"' class='testoPiccolino'></p>"
+  var link = "<a href='../pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a>"
+  $("#ver"+i).css({
+      "background-image": "url(./images/ver"+i+".png)",
+  }).append(testo, link).data({"num": i})
+  //mette il giusto click
+  var thisClick = clicks["click"+i];
+  $("#ver"+i).data({"click": thisClick})
+}
+
+//mette l'ordine in ogni verita
+for(i=1; i<21; i++) {
+  ordinedati.forEach(function(item, index) {
+    if(item == i) {
+      var rank = index+1;
+      $("#ver"+i).data({"rank": rank})
+    }
+  })
+  }
+
+
+
+//FILOSOFIA
+
+//dimensioni delle verita
+var x1;
+var x2;
+var x3;
+var x4;
+var x5;
+
+//all'inizio le dimensioni sono quelle iniziali
+x1 = dim;
+for(i=0; i<= $("#ver1").data("click"); i++) {
+  x1 = x1*fact;
+}
+x2 = dim;
+for(i=0; i<= $("#ver2").data("click"); i++) {
+  x2 = x2*fact;
+}
+x3 = dim;
+for(i=0; i<= $("#ver3").data("click"); i++) {
+  x3 = x3*fact;
+}
+x4 = dim;
+for(i=0; i<= $("#ver4").data("click"); i++) {
+  x4 = x4*fact;
+}
+x5 = dim;
+for(i=0; i<= $("#ver5").data("click"); i++) {
+  x5 = x5*fact;
+}
+
+//POLITICA
+
+//dimensioni delle verita
+var x6;
+var x7;
+var x8;
+var x9;
+var x10;
+
+//all'inizio le dimensioni sono quelle iniziali
+x6 = dim;
+for(i=0; i<= $("#ver6").data("click"); i++) {
+  x6 = x6*fact;
+}
+x7 = dim;
+for(i=0; i<= $("#ver7").data("click"); i++) {
+  x7 = x7*fact;
+}
+x8 = dim;
+for(i=0; i<= $("#ver8").data("click"); i++) {
+  x8 = x8*fact;
+}
+x9 = dim;
+for(i=0; i<= $("#ver9").data("click"); i++) {
+  x9 = x9*fact;
+}
+x10 = dim;
+for(i=0; i<= $("#ver10").data("click"); i++) {
+  x10 = x10*fact;
+}
+
+//SOCIETA
+
+//dimensioni delle verita
+var x11;
+var x12;
+var x13;
+var x14;
+var x15;
+
+//all'inizio le dimensioni sono quelle iniziali
+x11 = dim;
+for(i=0; i<= $("#ver11").data("click"); i++) {
+  x11 = x11*fact;
+}
+x12 = dim;
+for(i=0; i<= $("#ver12").data("click"); i++) {
+  x12 = x12*fact;
+}
+x13 = dim;
+for(i=0; i<= $("#ver13").data("click"); i++) {
+  x13 = x13*fact;
+}
+x14 = dim;
+for(i=0; i<= $("#ver14").data("click"); i++) {
+  x14 = x14*fact;
+}
+x15 = dim;
+for(i=0; i<= $("#ver15").data("click"); i++) {
+  x15 = x15*fact;
+}
+
+//RELIGIONE
+
+//dimensioni delle verita
+var x16;
+var x17;
+var x18;
+var x19;
+var x20;
+
+//all'inizio le dimensioni sono quelle iniziali
+x16 = dim;
+for(i=0; i<= $("#ver16").data("click"); i++) {
+  x16 = x16*fact;
+}
+x17 = dim;
+for(i=0; i<= $("#ver17").data("click"); i++) {
+  x17 = x17*fact;
+}
+x18 = dim;
+for(i=0; i<= $("#ver18").data("click"); i++) {
+  x18 = x18*fact;
+}
+x19 = dim;
+for(i=0; i<= $("#ver19").data("click"); i++) {
+  x19 = x19*fact;
+}
+x20 = dim;
+for(i=0; i<= $("#ver20").data("click"); i++) {
+  x20 = x20*fact;
+}
+
+dimensioni();
+
+//CORONA
+//prende il primo
+var primo = $("#ver11");
+var clickprimo = primo.data("click");
+var corona = $("#corona")
+$("#corona").fadeIn().css({
+  width: coronaDim*(1+clickprimo/40)+"px", height: coronaDim*(1+clickprimo/40)+"px",
+  top: coronaTop-clickprimo*1.01+"px", right: coronaRight-clickprimo+0.5*clickprimo+"px",
+})
+primo.append(corona)
+
+//hover delle box
+$(".box").css({
+  cursor: "pointer",
+}).mouseover(function() {
+  //var percentuale = $(this).data("click")*100/20
+  var rank = $(this).data("rank")
+  $(this).toggleClass("red")
+  $("#t"+$(this).data("num")).html(rank+"° prodotto venduto")
+}).mouseout(function() {
+  $(this).toggleClass("red")
+  $("#t"+$(this).data("num")).text("")
+}).click(function() { //click delle box
+  var thisNum = $(this).data("num");
+  console.log(thisNum);
+  if(thisNum < 16) {
+    var newNum = thisNum +5;
+    $.cookie("cookieNum", newNum, {expires: 7});
+    window.location=$(this).find("a").attr("href"); return false; //link
+  } else {
+    var newNum = thisNum -15;
+    $.cookie("cookieNum", newNum, {expires: 7});
+    window.location=$(this).find("a").attr("href"); return false; //link
+  }
+})
+
+</script>
+<script type="text/javascript" src="../hoverheader.js"></script>
+</html>
