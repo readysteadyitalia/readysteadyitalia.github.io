@@ -1,0 +1,215 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ready Steady</title>
+  <script type="text/javascript" src="../jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../jquery.cookie.js"></script>
+  <link rel="stylesheet" type="text/css" href="header-mobile.css">
+  <style>
+
+
+      #titolo {
+        position: absolute;
+        top: 21.05%; left: 16.66%;
+        font-size: 666%;
+        font-family: coreBoldCn;
+      }
+
+      @font-face {
+          font-family: coreLight;
+          src: url(../fonts/CoreSansD25Light.otf);
+      }
+
+      .v {
+        position: absolute;
+        left: 0;
+        height: calc(100/19*6%); width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        pointer-events: all;
+      }
+
+      #menu {
+        z-index: 1;
+      }
+
+      .contenitore {
+        pointer-events: none;
+      }
+
+      #contenitore1 {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+
+      #contenitore2 {
+        position: absolute;
+        top: calc(100/19*6%); left: 0;
+        width: 100%; height: 100%;
+      }
+
+      #contenitore3  {
+        position: absolute;
+        top: calc(100/19*12%); left: 0;
+        width: 100%; height: 100%;
+      }
+
+      #contenitore4  {
+        position: absolute;
+        top: calc(100/19*18%); left: 0;
+        width: 100%; height: 100%;
+      }
+
+      .grande {
+        position: absolute;
+        left: 0;
+        height: calc(100/19*10%); width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+          pointer-events: all;
+      }
+
+      #barrasotto {
+        position: absolute;
+        top: calc(100/19*150%); left: 0;
+        width: 100%; height: calc(100/19*2%);
+          background-color: #c32630;
+      }
+
+      .categoria {
+        position: absolute;
+        font-family: coreBoldCn;
+        font-size: 333%;
+        top: calc(100/12*0.5%);
+      }
+      #instagram {
+        position: absolute;
+        left: 47%;
+        top: 50%;
+        transform: translate(-50%, -125%);
+        font-size: 222%;
+        text-align: center;
+        width: 100%;
+        pointer-events: all;
+        font-family: coreBold;
+        text-decoration: none;
+        color: white;
+      }
+
+      #instaicon {
+        position: absolute;
+        background-image: url("../links/instagram.png");
+        background-repeat: no-repeat;
+        left: 74.5%; top: 50%;
+        transform: translate(-50%, -40%);
+        width: 50px; height: 50px;
+        background-size: contain;
+        pointer-events: all;
+      }
+  </style>
+</head>
+
+<body>
+
+<div id="wrapper" class="noSelect">
+
+  <a href="index.mobile.html">
+  <div id="marchio">
+  </div>  </a>
+
+
+  <div id="barrasotto">
+    <p id="instagram">
+    Seguici su:<a style="text-decoration: none; color: white; font-family: coreLight;" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
+    </p>
+    <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
+  </div>
+
+  <div id="linee">
+  </div>
+  <div id="titolo" class="testo"> CAMPIONI DI VENDITE </div>
+  <div id="menu">
+      <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
+      <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
+      <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
+  </div>
+  <div id="wrapperbox">
+      <div id="filosofia-box">
+        <div id="ver1" class="filosofia box">
+        </div>
+        <div id="ver2" class="filosofia box">
+        </div>
+        <div id="ver3" class="filosofia box">
+        </div>
+        <div id="ver4" class="filosofia box">
+        </div>
+        <div id="ver5" class="filosofia box">
+        </div>
+      </div>
+
+      <div id="politica-box">
+        <div id="ver6" class="politica box">
+        </div>
+        <div id="ver7" class="politica box">
+        </div>
+        <div id="ver8" class="politica box">
+        </div>
+        <div id="ver9" class="politica box">
+        </div>
+        <div id="ver10" class="politica box">
+        </div>
+      </div>
+
+      <div id="societa-box">
+        <div id="ver11" class="societa box">
+        </div>
+        <div id="ver12" class="societa box">
+        </div>
+        <div id="ver13" class="societa box">
+        </div>
+        <div id="ver14" class="societa box">
+        </div>
+        <div id="ver15" class="societa box">
+        </div>
+      </div>
+
+      <div id="religione-box">
+        <div id="ver16" class="religione box">
+        </div>
+        <div id="ver17" class="religione box">
+        </div>
+        <div id="ver18" class="religione box">
+        </div>
+        <div id="ver19" class="religione box">
+        </div>
+        <div id="ver20" class="religione box">
+        </div>
+      </div>
+      <div id="corona">
+      </div>
+  </div>
+</div>
+
+</body>
+
+<script>
+
+//MENU
+$("#linee").on("click", function() {
+  $("#menu").slideToggle()
+  $("#linee").toggleClass("frecciamenu");
+})
+
+
+
+//FOOTER
+$("#barrasotto").click(function() {
+    window.location=$(this).find("a").attr("href"); return false; //link
+})
+
+</script>
+
+</html>
