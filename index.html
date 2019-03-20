@@ -5,7 +5,9 @@
 <title>Ready Steady</title>
 <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
 <script type="text/javascript" src="hideall.js"></script>
+<script type="text/javascript" src="./provadati/ordinedati.js"></script>
 <link rel="stylesheet" type="text/css" href="./hideallstyle.css">
 <link rel="stylesheet" type="text/css" href="./sitostyle.css">
 <link rel="stylesheet" type="text/css" href="./duecentopercentostyle.css">
@@ -34,16 +36,27 @@
     Volantino
     </a>
   </div>
-  <div id="redFooter"></div>
-  <div id="footer" class="testo">
+  <div id="slider">
+    <div id="prod"></div>
+    <div id="frecciaSdx" class="frecciaS"></div>
+    <div id="frecciaSsx" class="frecciaS"></div>
+  </div>
+  <div id="titolo">
+    I PRODOTTI MIGLIORI
+  </div>
+  <div id="barrasotto">
     <p id="instagram">
     Seguici su:<a style="color: white" class="light" href="https://www.instagram.com/readysteadyitalia/"> @readysteadyitalia</a>
   </p>
   <div id="instaicon"><a href="https://www.instagram.com/readysteadyitalia/"></a> </div>
   </div>
+
   <div id="slide">
   </div>
   <div id="banner">
+    <div id="button">
+      <a href="./provadati/codice-dati-3.html" style="color: inherit; position: absolute; top: 49%; left: 50%; transform: translate(-50%, -50%); width: 100%"> Visualizza le statistiche di vendita</a>
+    </div>
   </div>
   <div id="banner2">
     <div id="video">
@@ -171,37 +184,91 @@ function toggleVideo(state) {
      }
   });
 
-//DIO ENTRA VARIATO
-  /*var y = 0;
-  var lastScrollTop = 0;
-  //left iniziale in px di slide
-  var pos = 1000;
-
-  $("#slide").css({left: pos+"px"})
-
-  $(document).scroll(function(event){
-     var st = $(this).scrollTop();
-     if (st > lastScrollTop){
-         if(pos >= 40) {
-           y+=1;
-           pos = pos - y;
-           console.log(pos)
-           $("#slide").css({left: pos+"px",})
-         }
-       } else if(st < lastScrollTop) {
-         if(pos <= 800) {
-           y-=1;
-           pos = pos + y;
-           console.log(pos)
-           $("#slide").css({left: pos+"px",})
-         }
-     }
-     lastScrollTop = st;
-  });*/
 
   //FOOTER
-  $("#footer").click(function() {
+  $("#barrasotto").click(function() {
       window.location=$(this).find("a").attr("href"); return false; //link
+  })
+  $("#button").click(function() {
+      window.location=$(this).find("a").attr("href"); return false; //link
+  })
+  $("#prod").click(function() {
+      window.location=$(this).find("a").attr("href"); return false; //link
+  })
+
+  //SLIDER
+  function createSlider() {
+    for(i=1; i<6; i++) {
+      //indicazioni
+      var prod = "<div id='prod"+i+"' class='prodClass'></div>"
+      $("#prod").append(prod)
+      var vaschetta = "<div id='vasc"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
+      var createNum = ordinedati[i-1];
+      $("#prod"+i).css({
+        left: (i-1)*33.33+"%",
+        "background-image": "url('./links/slide"+createNum+".png')",
+      }).append(vaschetta).data({"pos": i});
+      //vaschetta
+      $("#vasc"+i).css({
+        "background-image": "url('./links/vasc"+createNum+".png')",
+      }).data({"num": createNum}).click(function(){ //click
+        var thisNum = $(this).data("num")
+        $.cookie("cookieNum", thisNum, {expires: 7});
+        window.location=$(this).find("a").attr("href"); return false; //link
+      });
+    }
+  }
+
+  //lo slider si muove
+  function sliderVa() {
+
+        for(i=1; i<6; i++) {
+          //setta la posizione
+          var left = ($("#prod"+i).data("pos")-1)*33.33;
+          //appariscono quelli che devono sparire
+          if($("#prod"+i).data("pos") > 0 && $("#prod"+i).data("pos") < 4) {
+            $("#prod"+i).fadeIn(0)
+          }
+          $("#prod"+i).animate({left: left+"%",}, tempo, "easeInOutQuad")
+        }
+  }
+
+  $( window ).on( "load", createSlider );
+
+  //frecce slider
+  $("#frecciaSdx").click(function() {
+      start = 1;
+      //diminuisce la posizione
+      for(i=1; i<6; i++) {
+        var thisPos =  $("#prod"+i).data("pos");
+        var newPos = thisPos-1;
+        //mette la nuova posizione
+        $("#prod"+i).data({"pos": newPos});
+        //fa tornare all'inizio
+          if($("#prod"+i).data("pos") == -1) {
+            $("#prod"+i).data({"pos": 4}).fadeOut(0);
+          }
+      }
+   sliderVa()
+  })
+
+  var start = 0;
+
+  $("#frecciaSsx").click(function() {
+    if(start == 1) {
+      //diminuisce la posizione
+      for(i=1; i<6; i++) {
+        var thisPos =  $("#prod"+i).data("pos");
+        var newPos = thisPos+1;
+        //mette la nuova posizione
+        $("#prod"+i).data({"pos": newPos});
+        //fa tornare all'inizio
+          if($("#prod"+i).data("pos") == 5) {
+            $("#prod"+i).data({"pos": 0}).fadeOut(0);
+          }
+      }
+    sliderVa()
+    }
   })
 
 
