@@ -40,7 +40,7 @@
     }
 
     #marchio {
-      position: fixed;
+      position: absolute;
       top: 0; left: 0;
       width: 33.33%; height: 15.78%;
       background-image: url("./links/marchiomobile.png");
@@ -48,7 +48,7 @@
       background-repeat: no-repeat;
     }
     #linee {
-      position: fixed;
+      position: absolute;
       top: 0; right: 0;
       width: 33.33%; height: 15.78%;
       background-image: url("./links/linee.png");
@@ -194,11 +194,6 @@
   <div id="linee">
   </div>
   <div id="titolo" class="testo"> L'EVENTO </div>
-  <div id="menu">
-      <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
-      <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
-      <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
-  </div>
 
   <p>
     Nel nostro negozio a Base Milano<br>i nostri clienti hanno potuto<br><span class="red">scegliere la verità</span> in cui credono.
@@ -220,6 +215,12 @@
       <div id="i3" class="i"> </div>
     </div>
 
+    <div id="menu">
+        <a id="m1" class="menutesto" href="prodotti.mobile.html">Prodotti</a>
+        <a id="m2" class="menutesto" href="negozi.mobile.html">Negozi</a>
+        <a id="m3" class="menutesto" href="../links/Volantino.pdf">Volantino</a>
+    </div>
+
     <div id="corcontainer"> <iframe id='coriandoli' src='./coriandoli/index.html'></iframe>
     </div>
 
@@ -235,7 +236,17 @@ $("#linee").on("click", function() {
   $("#linee").toggleClass("frecciamenu");
 })
 
+//VERITA
+var link = "<a href='./prodotto.singolo.mobile.html' style='display: block'></a>"
+$(".c").append(link)
 
+for(i=1; i<4; i++) {
+  $("#c"+i).on("click", function() {
+    var thisNum = i;
+    $.cookie("cookieMobile", thisNum, {expires: 7});
+    window.location=$(this).find("a").attr("href"); return false; //link
+  })
+}
 
 </script>
 
