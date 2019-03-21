@@ -157,12 +157,12 @@ Confetti = function () {
       }
 
       requestAnimationFrame(this.render);
-    } }], [{ key: "CONST", get: function get() {return { SPRITE_WIDTH: 9, SPRITE_HEIGHT: 16, PAPER_LENGTH: 100, DURATION: 8000, ROTATION_RATE: 50, COLORS: ["#EF5350", "#EC407A", "#AB47BC", "#7E57C2", "#5C6BC0", "#42A5F5", "#29B6F6", "#26C6DA", "#26A69A", "#66BB6A", "#9CCC65", "#D4E157", "#FFEE58", "#FFCA28", "#FFA726", "#FF7043", "#8D6E63", "#BDBDBD", "#78909C"] };} }]);return Confetti;}();
+    } }], [{ key: "CONST", get: function get() {return { SPRITE_WIDTH: 16, SPRITE_HEIGHT: 25, PAPER_LENGTH: 100, DURATION: 8000, ROTATION_RATE: 50, COLORS: ["#EF5350", "#EC407A", "#AB47BC", "#7E57C2", "#5C6BC0", "#42A5F5", "#29B6F6", "#26C6DA", "#26A69A", "#66BB6A", "#9CCC65", "#D4E157", "#FFEE58", "#FFCA28", "#FFA726", "#FF7043", "#8D6E63", "#BDBDBD", "#78909C"] };} }]);return Confetti;}();
 
 
 (function () {
-  var DURATION = 4000,
-  LENGTH = 120;
+  var DURATION = 7000,
+  LENGTH = 400;
 
   new Confetti({
     width: window.innerWidth,
