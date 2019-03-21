@@ -240,9 +240,13 @@ $("#linee").on("click", function() {
 var link = "<a href='./prodotto.singolo.mobile.html' style='display: block'></a>"
 $(".c").append(link)
 
+$("#c1").data({"num": 16});
+$("#c2").data({"num": 9});
+$("#c3").data({"num": 3});
+
 for(i=1; i<4; i++) {
   $("#c"+i).on("click", function() {
-    var thisNum = i;
+    var thisNum = $(this).data("num");
     $.cookie("cookieMobile", thisNum, {expires: 7});
     window.location=$(this).find("a").attr("href"); return false; //link
   })
