@@ -155,6 +155,7 @@
     <a href="../index.html">
     <div id="marchio">
     </div>  </a>
+
   </div>
 
 
@@ -355,7 +356,7 @@ $(".box").css({
   //var percentuale = $(this).data("click")*100/20
   var rank = $(this).data("rank")
   $(this).toggleClass("red")
-  $("#t"+$(this).data("num")).html(rank+"° prodotto venduto")
+  $("#t"+$(this).data("num")).html(rank+"° prodotto acquistato")
 }).mouseout(function() {
   $(this).toggleClass("red")
   $("#t"+$(this).data("num")).text("")
