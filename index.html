@@ -203,7 +203,13 @@ function toggleVideo(state) {
       var prod = "<div id='prod"+i+"' class='prodClass'></div>"
       $("#prod").append(prod)
       var vaschetta = "<div id='vasc"+i+"' class='vaschetta'><a href='./pagineProdottiSingoli/prodottoSingolo.html' style='display: block'></a></div>";
-      var createNum = ordinedati[i-1];
+      var datiNum = ordinedati[i-1];
+      if(datiNum < 16) {
+          var createNum = datiNum+5;
+      } else {
+          var createNum = datiNum-15;
+      }
+
       $("#prod"+i).css({
         left: (i-1)*33.33+"%",
         "background-image": "url('./links/slide"+createNum+".png')",
